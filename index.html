@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -45,18 +46,17 @@
       gap:14px; padding:10px 2px 22px;
     }
     .brand{
-      display:flex; align-items:center; gap:16px;
+      display:flex; align-items:center; gap:20px;
     }
-    /* Estilo actualizado para el logo transparente y más grande */
     .logo{
-      width:72px; 
-      height:72px; 
+      width:80px; 
+      height:80px; 
       display:grid; 
       place-items: center;
       transition: transform 0.3s ease;
     }
     .logo:hover {
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
     .logo img{
       width:100%; 
@@ -65,9 +65,9 @@
       display:block;
     }
     .brand h1{
-      margin:0; font-size:24px; letter-spacing:.2px; font-weight: 800;
+      margin:0; font-size:26px; letter-spacing:.2px; font-weight: 800;
     }
-    .brand small{display:block; margin-top:2px; color:var(--muted2); font-size:13px}
+    .brand small{display:block; margin-top:2px; color:var(--muted2); font-size:14px}
     .pillbar{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .pill{
       display:inline-flex; align-items:center; gap:8px;
@@ -100,6 +100,8 @@
     @media (max-width:860px){
       .hero-inner{grid-template-columns:1fr; padding:30px 18px}
       .pillbar{justify-content:flex-start}
+      .brand h1{font-size: 22px}
+      .logo{width: 64px; height: 64px}
     }
     .kicker{
       display:inline-flex; align-items:center; gap:10px;
