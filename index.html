@@ -47,29 +47,25 @@
     .brand{
       display:flex; align-items:center; gap:16px;
     }
+    /* Estilo actualizado para el logo transparente y más grande */
     .logo{
-      width:64px; 
-      height:64px; 
-      border-radius:16px;
+      width:72px; 
+      height:72px; 
       display:grid; 
       place-items: center;
-      overflow:hidden;
-      background: rgba(255, 255, 255, 0.05); 
-      backdrop-filter: blur(5px);
-      border: 1px solid var(--stroke);
       transition: transform 0.3s ease;
     }
     .logo:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
     .logo img{
-      width:85%; 
-      height:85%; 
+      width:100%; 
+      height:100%; 
       object-fit: contain; 
       display:block;
     }
     .brand h1{
-      margin:0; font-size:22px; letter-spacing:.2px; font-weight: 800;
+      margin:0; font-size:24px; letter-spacing:.2px; font-weight: 800;
     }
     .brand small{display:block; margin-top:2px; color:var(--muted2); font-size:13px}
     .pillbar{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
@@ -229,7 +225,7 @@
     <div class="top">
       <div class="brand">
         <div class="logo">
-          <img src="custodiapp_logo_transparente.png" alt="CustodiApp Logo">
+          <img src="logo_transparente.png" alt="CustodiApp Logo">
         </div>
         <div>
           <h1>CustodiApp</h1>
