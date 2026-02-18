@@ -45,19 +45,33 @@
       gap:14px; padding:10px 2px 22px;
     }
     .brand{
-      display:flex; align-items:center; gap:12px;
+      display:flex; align-items:center; gap:16px;
     }
     .logo{
-      width:48px; height:48px; border-radius:12px;
-      display:grid; place-items:center;
+      width:64px; 
+      height:64px; 
+      border-radius:16px;
+      display:grid; 
+      place-items: center;
       overflow:hidden;
-      background: transparent;
+      background: rgba(255, 255, 255, 0.05); 
+      backdrop-filter: blur(5px);
+      border: 1px solid var(--stroke);
+      transition: transform 0.3s ease;
     }
-    .logo img{width:100%; height:100%; object-fit: contain; display:block}
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .logo img{
+      width:85%; 
+      height:85%; 
+      object-fit: contain; 
+      display:block;
+    }
     .brand h1{
-      margin:0; font-size:20px; letter-spacing:.2px; font-weight: 800;
+      margin:0; font-size:22px; letter-spacing:.2px; font-weight: 800;
     }
-    .brand small{display:block; margin-top:2px; color:var(--muted2); font-size:12px}
+    .brand small{display:block; margin-top:2px; color:var(--muted2); font-size:13px}
     .pillbar{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .pill{
       display:inline-flex; align-items:center; gap:8px;
@@ -215,7 +229,8 @@
     <div class="top">
       <div class="brand">
         <div class="logo">
-<img src="custodiapp_logo_oficial.png" alt="CustodiApp Logo"> 
+          <img src="custodiapp_logo_oficial.png" alt="CustodiApp Logo">
+        </div>
         <div>
           <h1>CustodiApp</h1>
           <small>Custodia compartida, sin cálculos mentales.</small>
