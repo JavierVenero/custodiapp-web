@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de privacidad | CustodiApp</title>
+  <meta name="description" content="Política de privacidad de CustodiApp" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --card:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.12);
+      --radius:18px;
+      --max: 860px;
+      --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+      --grad: linear-gradient(135deg,#2d5cff 0%, #12c2c8 45%, #8adf41 100%);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 70px}
+    .top{display:flex; align-items:center; gap:12px; margin-bottom:18px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;background:var(--grad);
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      display:grid;place-items:center;overflow:hidden;flex:0 0 44px;
+    }
+    .logo img{width:44px;height:44px;display:block}
+    h1{margin:0;font-size:20px;letter-spacing:-.2px}
+    .card{
+      margin-top:14px;
+      border:1px solid var(--stroke);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    h2{margin:18px 0 10px;font-size:16px}
+    p,li{color:var(--muted); line-height:1.55; font-size:14px}
+    a{color:inherit}
+    .back{display:inline-block;margin-top:16px;color:var(--muted);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo" aria-hidden="true">
+        <img src="https://raw.githubusercontent.com/JavierVenero/custodiapp-web/main/custodiapp_logo_oficial.png" alt="CustodiApp" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <h1>Política de privacidad</h1>
+        <div style="color:rgba(255,255,255,.58); font-size:12.5px; margin-top:3px;">CustodiApp · custodiapp.es</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Resumen</h2>
+      <p>
+        CustodiApp está diseñada para funcionar como <b>herramienta de uso personal</b>.
+        No requiere cuentas. No necesita que la otra parte instale la app.
+        La información se guarda, por defecto, en el dispositivo del usuario.
+      </p>
+
+      <h2>Datos que se tratan</h2>
+      <ul>
+        <li><b>Datos introducidos por el usuario</b> (por ejemplo: nombres, notas, patrones de custodia, eventos), con la finalidad de organizar su calendario.</li>
+        <li><b>Datos técnicos mínimos</b> necesarios para el funcionamiento estándar de la app y la tienda (por ejemplo, métricas agregadas de Google Play si el usuario las tiene activadas).</li>
+      </ul>
+
+      <h2>Qué NO hacemos</h2>
+      <ul>
+        <li>No vendemos datos.</li>
+        <li>No mostramos anuncios.</li>
+        <li>No pedimos registro / cuenta para usar la app.</li>
+        <li>No recopilamos información innecesaria para el uso principal.</li>
+      </ul>
+
+      <h2>Almacenamiento</h2>
+      <p>
+        La información de CustodiApp se guarda principalmente en el <b>dispositivo</b>.
+        Si en el futuro el usuario activa funciones opcionales de sincronización / copia en la nube, se informará explícitamente y se solicitará aceptación.
+      </p>
+
+      <h2>Base legal</h2>
+      <p>
+        El tratamiento de datos se basa en la <b>prestación del servicio</b> (permitir al usuario organizar su custodia) y en el <b>consentimiento</b>
+        para cualquier funcionalidad opcional que lo requiera.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>
+        Para consultas relacionadas con privacidad:
+        <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a>
+      </p>
+
+      <h2>Cambios en esta política</h2>
+      <p>
+        Podremos actualizar esta política para reflejar mejoras o cambios legales. Publicaremos la versión vigente en esta misma URL.
+      </p>
+
+      <a class="back" href="./index.html">← Volver</a>
+    </div>
+  </div>
+</body>
+</html>
