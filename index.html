@@ -2,13 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>CustodiApp | Custodia compartida, sin líos</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32-v2.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16-v2.png">
-<link rel="shortcut icon" href="/favicon-v2.ico">
+
   <meta name="description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
   <meta name="theme-color" content="#0b1020" />
+
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
   <style>
     :root{
       --bg:#0b1020;
@@ -30,7 +35,9 @@
                radial-gradient(900px 700px at 80% 90%, rgba(118,184,82,.22), transparent 55%);
       --font: -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:var(--font);
@@ -41,43 +48,85 @@
       -moz-osx-font-smoothing: grayscale;
       min-height: 100vh;
     }
+
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 70px}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:34px 18px 70px
+    }
+
     .top{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:10px 2px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 2px 22px;
     }
+
     .brand{
-      display:flex; align-items:center; gap:24px;
+      display:flex;
+      align-items:center;
+      gap:24px;
     }
+
     .logo{
-      width:120px; 
-      height:120px; 
-      display:grid; 
-      place-items: center;
+      width:120px;
+      height:120px;
+      display:grid;
+      place-items:center;
     }
+
     .logo img{
-      width:100%; 
-      height:100%; 
-      object-fit: contain; 
+      width:100%;
+      height:100%;
+      object-fit:contain;
       display:block;
     }
+
     .brand h1{
-      margin:0; font-size:32px; letter-spacing:.2px; font-weight: 800;
+      margin:0;
+      font-size:32px;
+      letter-spacing:.2px;
+      font-weight:800;
     }
-    .brand small{display:block; margin-top:4px; color:var(--muted2); font-size:15px}
-    .pillbar{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+
+    .brand small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted2);
+      font-size:15px;
+    }
+
+    .pillbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
     .pill{
-      display:inline-flex; align-items:center; gap:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
       padding:10px 12px;
       border:1px solid var(--stroke);
       background: rgba(255,255,255,.05);
-      border-radius: 999px;
-      color: var(--muted);
+      border-radius:999px;
+      color:var(--muted);
       font-size:13px;
       backdrop-filter: blur(10px);
     }
-    .dot{width:8px;height:8px;border-radius:99px;background:var(--grad);display:inline-block}
+
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:99px;
+      background:var(--grad);
+      display:inline-block;
+    }
+
     .hero{
       margin-top:8px;
       border:1px solid var(--stroke);
@@ -87,65 +136,38 @@
       overflow:hidden;
       position:relative;
     }
+
     .hero-inner{
-      position:relative;
       padding:36px 22px;
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap:18px;
       align-items:center;
     }
-    @media (max-width:860px){
-  .wrap{padding:22px 16px 60px}
 
-  .top{
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:12px;
-    padding:10px 2px 18px;
-  }
-
-  .brand{
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
-  }
-
-  .logo{width:110px; height:110px}
-
-  .pillbar{
-    justify-content:center;
-    gap:8px;
-  }
-
-  .pill{
-    font-size:12px;
-    padding:8px 10px;
-  }
-
-  .hero-inner{
-    grid-template-columns:1fr;
-    padding:24px 16px;
-  }
-
-  h2{font-size:36px}
-  .btn-primary{width:100%}
-}
-    @media (max-width:520px){
-      h2{font-size:36px}
+    h2{
+      margin:14px 0 10px;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-.6px;
     }
+
     .sub{
       margin:0 0 18px;
-      color: var(--muted);
+      color:var(--muted);
       font-size:17px;
       line-height:1.55;
       max-width:56ch;
     }
+
     .cta{
-      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
       margin-top:12px;
     }
+
     .btn{
       border:0;
       cursor:pointer;
@@ -153,91 +175,103 @@
       border-radius:16px;
       font-weight:700;
       font-size:15px;
-      letter-spacing:.2px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
       text-decoration:none;
-      transition: transform .08s ease, opacity .08s ease;
-      user-select:none;
+      transition: transform .08s ease;
     }
-    .btn:active{transform: scale(.98)}
+
+    .btn:active{transform:scale(.98)}
+
     .btn-primary{
       background: var(--grad);
       color:#0b1020;
       box-shadow: 0 18px 40px rgba(0,0,0,.35);
-      min-width: 250px;
+      min-width:250px;
     }
+
     .btn-ghost{
       background: rgba(255,255,255,.06);
-      color: var(--text);
-      border: 1px solid var(--stroke);
+      color:var(--text);
+      border:1px solid var(--stroke);
     }
+
     .fine{
       margin-top:10px;
-      color: var(--muted2);
+      color:var(--muted2);
       font-size:12.5px;
       line-height:1.45;
     }
+
     .side{
       border:1px solid var(--stroke);
       background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
+      border-radius:var(--radius);
       padding:18px;
       backdrop-filter: blur(10px);
     }
-    .side h3{margin:0 0 10px; font-size:14px; color:rgba(255,255,255,.86); letter-spacing:.3px}
-    .list{margin:0; padding:0; list-style:none; display:grid; gap:10px}
-    .li{
-      display:flex; gap:10px; align-items:flex-start;
-      color: var(--muted);
+
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
       font-size:13.5px;
-      line-height:1.35;
+      color:var(--muted);
     }
-    .icon{
-      width:22px;height:22px;border-radius:10px;
-      background: rgba(255,255,255,.06);
-      border:1px solid var(--stroke);
-      display:grid; place-items:center;
-      flex: 0 0 22px;
-      margin-top:1px;
-    }
+
     .grid{
       margin-top:18px;
       display:grid;
       grid-template-columns: repeat(3,1fr);
       gap:12px;
     }
-    @media (max-width:860px){ .grid{grid-template-columns:1fr} }
+
     .card{
       border:1px solid var(--stroke);
       background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
+      border-radius:var(--radius);
       padding:16px;
       backdrop-filter: blur(10px);
     }
-    .card b{display:block; margin-bottom:6px; font-size:14px}
-    .card p{margin:0; color:var(--muted); font-size:13.5px; line-height:1.45}
+
+    .card b{
+      display:block;
+      margin-bottom:6px;
+      font-size:14px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
+    }
+
     .footer{
       margin-top:26px;
       display:flex;
       justify-content:space-between;
       gap:12px;
       flex-wrap:wrap;
-      color: var(--muted2);
+      color:var(--muted2);
       font-size:12.5px;
     }
-    .links{display:flex; gap:14px; flex-wrap:wrap}
-    .links a{color:var(--muted2); text-decoration:none; border-bottom:1px solid rgba(255,255,255,.18)}
-    .links a:hover{opacity:.9}
+
+    @media (max-width:860px){
+      .top{flex-direction:column;text-align:center}
+      .brand{flex-direction:column}
+      .hero-inner{grid-template-columns:1fr;padding:24px 16px}
+      h2{font-size:36px}
+      .btn-primary{width:100%}
+      .grid{grid-template-columns:1fr}
+    }
   </style>
 </head>
 
 <body>
-  <div style="position:fixed;top:0;left:0;background:red;color:white;padding:4px;z-index:9999;">
-TEST V999
-</div>
   <div class="wrap">
     <div class="top">
       <div class="brand">
@@ -284,24 +318,24 @@ TEST V999
         <aside class="side">
           <h3>Lo que ganas hoy</h3>
           <ul class="list">
-            <li class="li"><span class="icon">📅</span><span><b>Calendario por colores</b> para ver “CON” y “SIN” de un vistazo.</span></li>
-            <li class="li"><span class="icon">🔁</span><span><b>Patrones automáticos</b> (semanas alternas, 2-2-3, días fijos…).</span></li>
-            <li class="li"><span class="icon">📜</span><span><b>Convenio regulador</b>: Navidad, Semana Santa, Verano.</span></li>
-            <li class="li"><span class="icon">📝</span><span><b>Excepciones y notas</b> para cambios puntuales.</span></li>
-            <li class="li"><span class="icon">🔒</span><span><b>Privacidad total</b>: sin cuentas, sin nube, sin anuncios.</span></li>
+            <li><b>Calendario por colores</b> para ver “CON” y “SIN” de un vistazo.</li>
+            <li><b>Patrones automáticos</b> (semanas alternas, 2-2-3, días fijos…).</li>
+            <li><b>Convenio regulador</b>: Navidad, Semana Santa, Verano.</li>
+            <li><b>Excepciones y notas</b> para cambios puntuales.</li>
+            <li><b>Privacidad total</b>: sin cuentas, sin nube, sin anuncios.</li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section class="grid" aria-label="Beneficios clave">
+    <section class="grid">
       <div class="card">
         <b>Herramienta personal</b>
-        <p>Tú la usas, tú te organizas. Sin agendas relacionadas</p>
+        <p>Tú la usas, tú te organizas. Sin agendas relacionadas.</p>
       </div>
       <div class="card">
         <b>Sin menús infinitos</b>
-        <p>Diseñada para ir al grano. Configuras tu patrón una vez y tienes cualquier año completo a la vista.</p>
+        <p>Configuras tu patrón una vez y tienes cualquier año completo a la vista.</p>
       </div>
       <div class="card">
         <b>Backup sencillo</b>
@@ -311,8 +345,8 @@ TEST V999
 
     <div class="footer">
       <div>© <span id="y"></span> CustodiApp · Las Palmas de Gran Canaria</div>
-      <div class="links">
-        <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a>
+      <div>
+        <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a> ·
         <a href="privacy.html">Política de privacidad</a>
       </div>
     </div>
