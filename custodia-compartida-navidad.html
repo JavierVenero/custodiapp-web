@@ -1,0 +1,460 @@
+ <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <title>Custodia compartida en Navidad | CustodiApp</title>
+  <meta name="description" content="Cómo organizar la custodia compartida en Navidad sin liarte con fechas, periodos, cambios y excepciones. Calendario visual y claro con CustodiApp." />
+  <meta name="keywords" content="custodia compartida navidad, navidad custodia compartida, vacaciones navidad custodia compartida, calendario custodia compartida navidad, convenio navidad custodia" />
+  <link rel="canonical" href="https://custodiapp.es/custodia-compartida-navidad.html" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CustodiApp" />
+  <meta property="og:title" content="Custodia compartida en Navidad | CustodiApp" />
+  <meta property="og:description" content="Organiza Navidad en custodia compartida con una vista clara, visual y sin líos." />
+  <meta property="og:url" content="https://custodiapp.es/custodia-compartida-navidad.html" />
+  <meta property="og:image" content="https://custodiapp.es/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custodia compartida en Navidad | CustodiApp" />
+  <meta name="twitter:description" content="Navidad, periodos especiales y excepciones organizados con claridad." />
+  <meta name="twitter:image" content="https://custodiapp.es/og.png" />
+
+  <style>
+    :root{
+      --bg:#08111f;
+      --bg2:#0d1830;
+      --card:rgba(15,23,42,.72);
+      --line:rgba(255,255,255,.10);
+      --text:#f8fafc;
+      --muted:#b8c2d4;
+      --blue:#59a8ff;
+      --green:#9fe870;
+      --shadow:0 18px 44px rgba(0,0,0,.28);
+      --radius:24px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(700px 380px at 92% 88%, rgba(159,232,112,.18), transparent 60%),
+        radial-gradient(720px 420px at 8% 8%, rgba(89,168,255,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    .top{padding:26px 0 8px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{
+      width:56px;height:56px;border-radius:16px;
+      box-shadow:0 8px 24px rgba(0,0,0,.22);
+    }
+    .brand .t1{font-weight:800;font-size:1.8rem;letter-spacing:-.03em}
+    .brand .t2{color:var(--muted);font-size:.98rem;margin-top:2px}
+
+    .hero{padding:26px 0 30px}
+    .heroCard{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      background:
+        radial-gradient(520px 260px at 82% 22%, rgba(159,232,112,.22), transparent 55%),
+        radial-gradient(480px 280px at 12% 18%, rgba(89,168,255,.24), transparent 55%),
+        linear-gradient(135deg, rgba(16,34,71,.95), rgba(13,23,42,.95));
+      padding:34px 30px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:26px;
+      align-items:center;
+    }
+    .pillRow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+    .pill{
+      border:1px solid rgba(255,255,255,.12);
+      color:#eef6ff;
+      background:rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:.95rem;
+      font-weight:700;
+      line-height:1;
+    }
+    h1{
+      margin:0 0 12px;
+      font-size:clamp(2rem,4.4vw,4.1rem);
+      line-height:.98;
+      letter-spacing:-.045em;
+      max-width:12ch;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:1.12rem;
+      line-height:1.55;
+      max-width:62ch;
+    }
+    .cta{
+      margin-top:22px;
+      display:flex;flex-wrap:wrap;gap:12px;
+      align-items:center;
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:52px;
+      padding:0 18px;
+      border-radius:16px;
+      font-weight:800;
+      letter-spacing:-.02em;
+      border:1px solid transparent;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .btnPrimary{
+      background:linear-gradient(90deg,var(--blue),var(--green));
+      color:#08111f;
+    }
+    .btnGhost{
+      color:#eef6ff;
+      border-color:rgba(255,255,255,.16);
+      background:rgba(255,255,255,.05);
+    }
+    .heroSide{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      padding:18px;
+      backdrop-filter: blur(8px);
+    }
+    .miniLabel{font-size:.9rem;color:var(--muted);font-weight:700;margin-bottom:10px}
+    .miniList{display:grid;gap:10px}
+    .miniItem{
+      padding:12px 14px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);
+      border-radius:16px;
+      color:#eef6ff;
+      font-size:.98rem;
+      line-height:1.35;
+    }
+
+    .section{padding:18px 0 10px}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:24px 22px;
+    }
+    .card h2{
+      margin:0 0 12px;
+      font-size:1.4rem;
+      letter-spacing:-.03em;
+    }
+    .card p{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:1.02rem;
+    }
+    .card ul{
+      margin:0;
+      padding-left:18px;
+      color:#eef6ff;
+      line-height:1.7;
+    }
+
+    .problem{
+      margin-top:10px;
+      padding:24px 22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+    .problem h2{
+      margin:0 0 10px;
+      font-size:1.6rem;
+      letter-spacing:-.03em;
+    }
+    .problem p{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .faq{
+      margin-top:18px;
+      display:grid;
+      gap:14px;
+    }
+    .faqItem{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px 18px;
+      box-shadow:var(--shadow);
+    }
+    .faqItem h3{
+      margin:0 0 8px;
+      font-size:1.08rem;
+      letter-spacing:-.02em;
+    }
+    .faqItem p{
+      margin:0;color:var(--muted);line-height:1.65;
+    }
+
+    .links{
+      display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;
+    }
+    .linkCard{
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:#eef6ff;
+      font-weight:700;
+    }
+
+    .final{padding:22px 0 40px}
+    .finalCard{
+      border-radius:28px;
+      border:1px solid var(--line);
+      background:
+        radial-gradient(420px 240px at 88% 18%, rgba(159,232,112,.18), transparent 55%),
+        radial-gradient(380px 220px at 10% 12%, rgba(89,168,255,.18), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+      padding:28px 24px;
+      text-align:center;
+    }
+    .finalCard h2{
+      margin:0 0 10px;
+      font-size:1.9rem;
+      letter-spacing:-.04em;
+    }
+    .finalCard p{
+      margin:0 auto 16px;
+      max-width:760px;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:1.05rem;
+    }
+
+    .foot{
+      padding:14px 0 34px;
+      color:#93a2bd;
+      font-size:.95rem;
+      text-align:center;
+    }
+    .foot a{color:#c4d2ea;text-decoration:underline}
+
+    @media (max-width: 920px){
+      .heroGrid,.grid2{grid-template-columns:1fr}
+      h1{max-width:none}
+    }
+
+    @media (max-width: 640px){
+      .heroCard,.card,.problem,.faqItem,.finalCard{padding:20px 18px}
+      .top{padding-top:20px}
+      .brand img{width:48px;height:48px}
+      .brand .t1{font-size:1.55rem}
+      .sub{font-size:1.02rem}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="https://custodiapp.es/calendario-custodia-compartida.html">
+        <img src="logo_transparente.png" alt="CustodiApp" />
+        <div>
+          <div class="t1">CustodiApp</div>
+          <div class="t2">Custodia compartida, sin cálculos mentales.</div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="heroCard">
+        <div class="heroGrid">
+          <div>
+            <div class="pillRow">
+              <span class="pill">🎄 Navidad y periodos especiales</span>
+              <span class="pill">⚡ En 1 minuto lo tienes</span>
+              <span class="pill">✅ Pago único 2,99 €</span>
+            </div>
+
+            <h1>Custodia compartida en Navidad, sin liarte con fechas raras.</h1>
+            <p class="sub">
+              Navidad siempre trae la misma película: cuándo empieza, cómo se divide,
+              a quién le toca cada bloque y qué pasa si además hay cambios o excepciones.
+              CustodiApp lo convierte en algo visual, claro y rápido.
+            </p>
+
+            <div class="cta">
+              <a class="btn btnPrimary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener">
+                Descargar CustodiApp en Google Play
+              </a>
+              <a class="btn btnGhost" href="https://custodiapp.es/calendario-custodia-compartida.html">
+                Ver calendario de custodia
+              </a>
+            </div>
+          </div>
+
+          <aside class="heroSide" aria-label="Puntos clave">
+            <div class="miniLabel">Lo que resuelves aquí</div>
+            <div class="miniList">
+              <div class="miniItem">Ver bloques navideños de forma clara y visual.</div>
+              <div class="miniItem">Entender rápido a quién le toca cada periodo.</div>
+              <div class="miniItem">Añadir excepciones si la realidad no sigue el guion.</div>
+              <div class="miniItem">No depender de cálculos mentales ni mensajes antiguos.</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="wrap">
+      <div class="problem">
+        <h2>El caos navideño no suele venir por mala voluntad. Viene por las fechas.</h2>
+        <p>
+          En Navidad todo se complica un poco más: días especiales, cambios de rutina,
+          cenas, viajes, vacaciones escolares y convenios que no siempre se recuerdan igual.
+        </p>
+        <p>
+          Y cuando intentas resolverlo a base de memoria, capturas antiguas o cuentas rápidas,
+          acaba apareciendo la duda de siempre: “espera... ¿esto cómo caía exactamente?”.
+        </p>
+        <p>
+          <strong>CustodiApp</strong> te ayuda justo ahí: a ver Navidad dentro del calendario
+          general, con bloques claros, excepciones y una lectura visual mucho más limpia.
+        </p>
+      </div>
+
+      <div class="grid2" style="margin-top:18px;">
+        <section class="card">
+          <h2>Qué puedes aclarar</h2>
+          <ul>
+            <li>Primer y segundo periodo navideño</li>
+            <li>Cómo cae el calendario escolar</li>
+            <li>Qué pasa si hay cambios puntuales</li>
+            <li>Cómo se cruza Navidad con el patrón normal</li>
+            <li>Qué bloque corresponde a cada parte</li>
+            <li>Notas para no depender de la memoria</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Por qué ayuda tanto aquí</h2>
+          <ul>
+            <li>Navidad rompe el patrón mental habitual</li>
+            <li>Todo se vuelve más visual y menos confuso</li>
+            <li>Sirve para anticiparte, no para improvisar</li>
+            <li>Evita dudas repetidas</li>
+            <li>Sin suscripciones</li>
+            <li>Todo en tu móvil</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="faq">
+        <section class="faqItem">
+          <h3>¿Sirve aunque mi convenio marque periodos concretos?</h3>
+          <p>
+            Sí. Precisamente la idea es ayudarte a superponer esos bloques especiales
+            dentro del calendario sin perder la referencia del resto del año.
+          </p>
+        </section>
+
+        <section class="faqItem">
+          <h3>¿Y si además de Navidad tengo cambios puntuales?</h3>
+          <p>
+            También. Una de las ventajas de CustodiApp es que no te obliga a vivir
+            dentro de un patrón rígido: puedes marcar excepciones y notas cuando hace falta.
+          </p>
+        </section>
+
+        <section class="faqItem">
+          <h3>¿Esto sustituye al convenio?</h3>
+          <p>
+            No. El convenio manda. La app lo que hace es ayudarte a entenderlo y visualizarlo
+            mejor en el día a día, que es donde suelen aparecer los líos.
+          </p>
+        </section>
+
+        <section class="faqItem">
+          <h3>¿Hay mensualidad?</h3>
+          <p>
+            No. <strong>Pago único de 2,99 €</strong>. La compras una vez y listo.
+          </p>
+        </section>
+      </div>
+
+      <div class="links">
+        <a class="linkCard" href="https://custodiapp.es/calendario-custodia-compartida.html">Calendario de custodia compartida</a>
+        <a class="linkCard" href="https://custodiapp.es/vacaciones-custodia-compartida.html">Vacaciones en custodia compartida</a>
+        <a class="linkCard" href="https://custodiapp.es/semanas-alternas-custodia.html">Semanas alternas</a>
+      </div>
+    </div>
+  </main>
+
+  <section class="final">
+    <div class="wrap">
+      <div class="finalCard">
+        <h2>Navidad no tiene por qué ser un sudoku.</h2>
+        <p>
+          Si quieres ver claramente cómo cae la custodia compartida en Navidad,
+          con bloques, excepciones y una visión visual del calendario,
+          <strong>CustodiApp</strong> te lo pone mucho más fácil.
+        </p>
+        <div class="cta" style="justify-content:center;">
+          <a class="btn btnPrimary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener">
+            Descargar CustodiApp
+          </a>
+          <a class="btn btnGhost" href="https://custodiapp.es/calendario-custodia-compartida.html">
+            Ver cómo se organiza el calendario
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      © 2026 CustodiApp ·
+      <a href="https://custodiapp.es/privacy.html">Política de privacidad</a>
+    </div>
+  </footer>
+</body>
+</html>
