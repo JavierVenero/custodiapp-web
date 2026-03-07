@@ -1,28 +1,30 @@
 <!doctype html>
 <html lang="es">
-
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>CustodiApp — Tu calendario de custodia compartida</title>
-  <meta name="description" content="CustodiApp es la herramienta visual más rápida y sencilla para organizar turnos, visitas y vacaciones en custodias compartidas. Pago único, sin cuentas, sin nube.">
+  <title>CustodiApp — Tu calendario de custodia compartida</title>
   <meta name="description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
   <meta name="keywords" content="custodia compartida, calendario de custodia, app custodia, con o sin niños, organización familiar, turnos, padres separados, planificación de custodia">
-  <!-- OPEN GRAPH (WhatsApp / Facebook / LinkedIn) -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="CustodiApp" />
-<meta property="og:title" content="CustodiApp | Custodia compartida, sin líos" />
-<meta property="og:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
-<meta property="og:url" content="https://custodiapp.es/" />
-<meta property="og:image" content="https://custodiapp.es/og.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="canonical" href="https://custodiapp.es/" />
 
-<!-- TWITTER / X (también lo usan algunos previews) -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="CustodiApp | Custodia compartida, sin líos" />
-<meta name="twitter:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
-<meta name="twitter:image" content="https://custodiapp.es/og.png" />  <meta name="theme-color" content="#0b1020" />
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CustodiApp" />
+  <meta property="og:title" content="CustodiApp | Custodia compartida, sin líos" />
+  <meta property="og:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
+  <meta property="og:url" content="https://custodiapp.es/" />
+  <meta property="og:image" content="https://custodiapp.es/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CustodiApp | Custodia compartida, sin líos" />
+  <meta name="twitter:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
+  <meta name="twitter:image" content="https://custodiapp.es/og.png" />
 
   <!-- FAVICONS -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -38,17 +40,18 @@
       --muted:rgba(255,255,255,.72);
       --muted2:rgba(255,255,255,.58);
       --stroke:rgba(255,255,255,.12);
-      --shadow: 0 20px 50px rgba(0,0,0,.30);
+      --shadow:0 20px 50px rgba(0,0,0,.30);
       --radius:18px;
       --radius2:22px;
-      --max: 1020px;
+      --max:1020px;
       --blue:#2d408f;
       --green:#76b852;
-      --grad: linear-gradient(135deg, var(--blue) 0%, #12c2c8 45%, var(--green) 100%);
-      --grad2: radial-gradient(1200px 700px at 20% 10%, rgba(47,123,255,.35), transparent 55%),
-               radial-gradient(1000px 700px at 80% 20%, rgba(18,194,200,.28), transparent 55%),
-               radial-gradient(900px 700px at 80% 90%, rgba(118,184,82,.22), transparent 55%);
-      --font: -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
+      --grad:linear-gradient(135deg, var(--blue) 0%, #12c2c8 45%, var(--green) 100%);
+      --grad2:
+        radial-gradient(1200px 700px at 20% 10%, rgba(47,123,255,.35), transparent 55%),
+        radial-gradient(1000px 700px at 80% 20%, rgba(18,194,200,.28), transparent 55%),
+        radial-gradient(900px 700px at 80% 90%, rgba(118,184,82,.22), transparent 55%);
+      --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
     }
 
     *{box-sizing:border-box}
@@ -57,19 +60,19 @@
       margin:0;
       font-family:var(--font);
       color:var(--text);
-      background: var(--bg);
-      background-image: var(--grad2);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
+      background:var(--bg);
+      background-image:var(--grad2);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
     }
 
-    a{color:inherit}
+    a{color:inherit;text-decoration:none}
 
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:34px 18px 70px
+      padding:34px 18px 70px;
     }
 
     .top{
@@ -114,21 +117,14 @@
       font-size:15px;
     }
 
-    .pillbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;   /* centra horizontal */
-  align-items: center;
-  margin-top: 1.5rem;
-      
-   }
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
+    .pillbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.5rem;
+      justify-content:center;
+      align-items:center;
+      margin-top:1.5rem;
+    }
 
     .pill{
       display:inline-flex;
@@ -136,11 +132,11 @@
       gap:8px;
       padding:10px 12px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.05);
+      background:rgba(255,255,255,.05);
       border-radius:999px;
       color:var(--muted);
       font-size:13px;
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
     }
 
     .dot{
@@ -154,9 +150,9 @@
     .hero{
       margin-top:8px;
       border:1px solid var(--stroke);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
-      border-radius: var(--radius2);
-      box-shadow: var(--shadow);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius:var(--radius2);
+      box-shadow:var(--shadow);
       overflow:hidden;
       position:relative;
     }
@@ -164,9 +160,16 @@
     .hero-inner{
       padding:36px 22px;
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns:1.2fr .8fr;
       gap:18px;
       align-items:center;
+    }
+
+    .kicker{
+      color:#d9e7ff;
+      font-size:14px;
+      font-weight:700;
+      margin-bottom:8px;
     }
 
     h2{
@@ -203,20 +206,20 @@
       align-items:center;
       justify-content:center;
       text-decoration:none;
-      transition: transform .08s ease;
+      transition:transform .08s ease;
     }
 
     .btn:active{transform:scale(.98)}
 
     .btn-primary{
-      background: var(--grad);
+      background:var(--grad);
       color:#0b1020;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      box-shadow:0 18px 40px rgba(0,0,0,.35);
       min-width:250px;
     }
 
     .btn-ghost{
-      background: rgba(255,255,255,.06);
+      background:rgba(255,255,255,.06);
       color:var(--text);
       border:1px solid var(--stroke);
     }
@@ -230,10 +233,15 @@
 
     .side{
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.05);
+      background:rgba(255,255,255,.05);
       border-radius:var(--radius);
       padding:18px;
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
+    }
+
+    .side h3{
+      margin:0 0 10px;
+      font-size:18px;
     }
 
     .list{
@@ -249,16 +257,16 @@
     .grid{
       margin-top:18px;
       display:grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns:repeat(3,1fr);
       gap:12px;
     }
 
     .card{
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.05);
+      background:rgba(255,255,255,.05);
       border-radius:var(--radius);
       padding:16px;
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
     }
 
     .card b{
@@ -272,6 +280,56 @@
       color:var(--muted);
       font-size:13.5px;
       line-height:1.45;
+    }
+
+    .guides{
+      margin-top:18px;
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.05);
+      border-radius:var(--radius2);
+      padding:18px;
+      backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+    }
+
+    .guides h3{
+      margin:0 0 6px;
+      font-size:22px;
+      letter-spacing:-.3px;
+    }
+
+    .guides p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .guides-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .guide-card{
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.05);
+      border-radius:16px;
+      padding:14px;
+    }
+
+    .guide-card strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:14px;
+      color:var(--text);
+    }
+
+    .guide-card span{
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
+      display:block;
     }
 
     .footer{
@@ -291,6 +349,7 @@
       h2{font-size:36px}
       .btn-primary{width:100%}
       .grid{grid-template-columns:1fr}
+      .guides-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -318,7 +377,7 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="kicker">✅ <b>Organiza tu año en 1 minuto</b> · Visual · Rápida</div>
+          <div class="kicker">✅ Organiza tu año en 1 minuto · Visual · Rápida</div>
           <h2>Tu custodia, ordenada. Sin estrés.</h2>
           <p class="sub">
             CustodiApp te permite planificar turnos, régimen de visitas y vacaciones de forma visual.
@@ -326,11 +385,11 @@
           </p>
 
           <div class="cta">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener">
-              Descargar en Google Play
+            <a class="btn btn-primary" href="https://custodiapp.es/calendario-custodia-compartida.html">
+              Ver calendario de custodia
             </a>
-            <a class="btn btn-ghost" href="mailto:soporte@custodiapp.es">
-              Soporte
+            <a class="btn btn-ghost" href="https://custodiapp.es/custodia-compartida.html">
+              Ver guías útiles
             </a>
           </div>
 
@@ -364,6 +423,43 @@
       <div class="card">
         <b>Backup sencillo</b>
         <p>Exporta e importa tu base de datos para no perder nada al cambiar de dispositivo.</p>
+      </div>
+    </section>
+
+    <section class="guides">
+      <h3>Guías útiles sobre custodia compartida</h3>
+      <p>Si quieres resolver casos concretos, aquí tienes acceso rápido a las páginas más útiles:</p>
+
+      <div class="guides-grid">
+        <a class="guide-card" href="https://custodiapp.es/custodia-compartida.html">
+          <strong>Custodia compartida</strong>
+          <span>Página madre con una visión general y acceso a todas las guías.</span>
+        </a>
+
+        <a class="guide-card" href="https://custodiapp.es/calendario-custodia-compartida.html">
+          <strong>Calendario de custodia compartida</strong>
+          <span>La landing principal con capturas, explicación clara y acceso directo a la app.</span>
+        </a>
+
+        <a class="guide-card" href="https://custodiapp.es/semanas-alternas-custodia.html">
+          <strong>Semanas alternas</strong>
+          <span>Cómo aclararte con semanas CON/SIN y el patrón anual.</span>
+        </a>
+
+        <a class="guide-card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
+          <strong>Vacaciones en custodia compartida</strong>
+          <span>Verano, Navidad, Semana Santa y excepciones explicadas de forma visual.</span>
+        </a>
+
+        <a class="guide-card" href="https://custodiapp.es/custodia-compartida-navidad.html">
+          <strong>Custodia compartida en Navidad</strong>
+          <span>Bloques navideños, cambios y periodos especiales sin liarte con las fechas.</span>
+        </a>
+
+        <a class="guide-card" href="https://custodiapp.es/custodia-compartida-verano.html">
+          <strong>Custodia compartida en verano</strong>
+          <span>Quincenas, bloques y vacaciones escolares organizados con claridad.</span>
+        </a>
       </div>
     </section>
 
