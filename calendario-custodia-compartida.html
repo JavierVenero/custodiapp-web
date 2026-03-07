@@ -40,7 +40,6 @@
       --muted:#5f6f8d;
       --blue:#4667d9;
       --green:#7cc45a;
-      --orange:#efab3b;
       --shadow:0 10px 30px rgba(18,31,53,.10);
       --radius:20px;
       --max:1100px;
@@ -219,6 +218,33 @@
       background:#3f56c6;color:#fff;
       box-shadow:var(--shadow);
     }
+
+    .faq{
+      display:grid;
+      gap:12px;
+      margin-top:14px;
+    }
+    .faqItem{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:14px 16px;
+    }
+    .faqItem h3{
+      margin:0 0 8px;
+      font-size:1rem;
+      color:#203250;
+      letter-spacing:-.02em;
+    }
+    .faqItem p{
+      margin:0;
+      color:#5f6f8d;
+      font-size:.95rem;
+      line-height:1.6;
+      font-weight:600;
+    }
+
     .foot{
       text-align:center;
       color:#6b7b96;
@@ -373,6 +399,59 @@
             <h3 class="h2" style="font-size:1.05rem;">Custodia compartida en Semana Santa</h3>
             <p class="p">Días festivos, periodos cortos y excepciones vistos de forma simple.</p>
           </a>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:18px;">
+        <h2 class="h2">Preguntas frecuentes</h2>
+        <p class="p">Las dudas más normales, respondidas sin rodeos.</p>
+
+        <div class="faq">
+          <div class="faqItem">
+            <h3>¿CustodiApp sirve solo para custodia compartida?</h3>
+            <p>
+              Está pensada sobre todo para custodia compartida, semanas alternas, vacaciones y excepciones.
+              Justo donde más suele aparecer el lío mental con fechas y periodos.
+            </p>
+          </div>
+
+          <div class="faqItem">
+            <h3>¿Necesito crear cuenta?</h3>
+            <p>
+              No. Esa es una de las ventajas del producto: no hay cuentas, ni nube, ni configuraciones pesadas.
+              Abres, organizas y lo tienes en tu móvil.
+            </p>
+          </div>
+
+          <div class="faqItem">
+            <h3>¿Tiene mensualidad o suscripción?</h3>
+            <p>
+              No. Es <strong>pago único de 2,99 €</strong>. La compras una vez y listo.
+            </p>
+          </div>
+
+          <div class="faqItem">
+            <h3>¿Puedo organizar vacaciones como Navidad, verano o Semana Santa?</h3>
+            <p>
+              Sí. Precisamente ahí está uno de sus puntos fuertes: ver esos periodos especiales
+              dentro del calendario sin tener que rehacer cuentas cada vez.
+            </p>
+          </div>
+
+          <div class="faqItem">
+            <h3>¿Sirve aunque tenga convenio regulador con reglas concretas?</h3>
+            <p>
+              Sí. La app no sustituye el convenio, pero sí te ayuda a aterrizarlo en un calendario claro,
+              usable y mucho más fácil de entender en el día a día.
+            </p>
+          </div>
+
+          <div class="faqItem">
+            <h3>¿Y si tengo cambios puntuales o excepciones?</h3>
+            <p>
+              También. Puedes reflejar mejor la realidad cuando el patrón base no basta.
+            </p>
+          </div>
         </div>
       </section>
 
