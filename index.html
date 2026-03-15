@@ -339,95 +339,6 @@
       font-size:12.5px;
     }
 
-    /* Estilos añadidos para el simulador */
-    .sim-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--stroke);
-      border-radius: var(--radius2);
-      padding: 24px;
-      margin-top: 18px;
-      backdrop-filter: blur(10px);
-    }
-    
-    .sim-controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 24px;
-      align-items: flex-end;
-    }
-    
-    .sim-select-wrapper {
-      flex: 1;
-      min-width: 200px;
-    }
-    
-    .sim-select-wrapper label {
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    
-    .sim-select {
-      width: 100%;
-      padding: 12px 16px;
-      background: rgba(0, 0, 0, 0.2);
-      border: 1px solid var(--stroke);
-      border-radius: 12px;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 15px;
-      outline: none;
-    }
-
-    .sim-select option {
-      background: var(--bg);
-      color: var(--text);
-    }
-    
-    .sim-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 8px;
-      background: rgba(0,0,0,0.2);
-      padding: 16px;
-      border-radius: 16px;
-    }
-    
-    .sim-header {
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      padding-bottom: 8px;
-    }
-    
-    .sim-day {
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      color: white;
-    }
-
-    .qr-box {
-      margin-top: 24px;
-      text-align: center;
-      padding: 24px;
-      background: rgba(255,255,255,0.03);
-      border: 1px dashed var(--stroke);
-      border-radius: var(--radius2);
-    }
-
-    .qr-box img {
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
-
     @media (max-width:860px){
       .top{flex-direction:column;text-align:center}
       .brand{flex-direction:column}
@@ -497,31 +408,6 @@
       </div>
     </section>
 
-    <section class="sim-card">
-      <h3 style="margin: 0 0 16px; font-size: 22px;">Prueba el Simulador</h3>
-      <p style="color: var(--muted); margin: 0 0 24px; font-size: 15px;">Selecciona un patrón para ver cómo CustodiApp organiza un mes de ejemplo.</p>
-      
-      <div class="sim-controls">
-        <div class="sim-select-wrapper">
-          <label>TIPO DE CUSTODIA</label>
-          <select id="simuladorPattern" class="sim-select" onchange="actualizarSimulador()">
-            <option value="semanas">Semanas Alternas</option>
-            <option value="223">Patrón 2-2-3</option>
-            <option value="finesdesemana">Fines de Semana Alternos</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="sim-grid" id="simuladorGrid">
-        </div>
-
-      <div class="qr-box">
-        <h4 style="margin: 0 0 12px; font-size: 16px;">¿Te gusta cómo queda? Llévatelo al móvil.</h4>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.custodiapp.app&bgcolor=FFFFFF&color=0b1020" alt="Código QR Descarga" width="150" height="150">
-        <p style="margin: 0; color: var(--muted); font-size: 14px;">Escanea para descargar directo desde Google Play.</p>
-      </div>
-    </section>
-
     <section class="grid">
       <div class="card">
         <b>Herramienta personal</b>
@@ -542,42 +428,52 @@
       <p>Si quieres resolver casos concretos, aquí tienes acceso rápido a las páginas más útiles:</p>
 
       <div class="guides-grid">
+
         <a class="guide-card" href="https://custodiapp.es/custodia-compartida.html">
           <strong>Custodia compartida</strong>
           <span>Página madre con una visión general y acceso a todas las guías.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/calendario-custodia-compartida.html">
           <strong>Calendario de custodia compartida</strong>
           <span>La página principal sobre capturas, explicación clara y acceso directo a la app.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/semanas-alternas-custodia.html">
           <strong>Semanas alternas</strong>
           <span>Cómo aclararte con semanas CON/SIN y el patrón anual.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
           <strong>Vacaciones en custodia compartida</strong>
           <span>Verano, Navidad, Semana Santa y excepciones explicadas de forma visual.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/custodia-compartida-navidad.html">
           <strong>Custodia compartida en Navidad</strong>
           <span>Bloques navideños, cambios y periodos especiales sin liarte con las fechas.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/custodia-compartida-verano.html">
           <strong>Custodia compartida en verano</strong>
           <span>Quincenas, bloques y vacaciones escolares organizados con claridad.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/custodia-compartida-semana-santa.html">
           <strong>Custodia compartida en Semana Santa</strong>
           <span>Pasos festivos, periodos cortos y excepciones vistos de forma simple.</span>
         </a>
+
         <a class="guide-card" href="/simulador.html">
           <strong>Simulador de custodia compartida</strong>
           <span>Prueba en segundos cómo se vería tu calendario anual con semanas alternas.</span>
         </a>
+
         <a class="guide-card" href="https://custodiapp.es/convenio-regulador-custodia-compartida.html">
           <strong>Convenio regulador y custodia compartida</strong>
           <span>Cómo aterrizar el convenio en un calendario real con vacaciones, bloques y excepciones.</span>
         </a>
+
       </div>
     </section>
 
@@ -592,37 +488,6 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Script del simulador integrado
-    function actualizarSimulador() {
-      const grid = document.getElementById('simuladorGrid');
-      const pattern = document.getElementById('simuladorPattern').value;
-      grid.innerHTML = '';
-
-      const dias = ['L','M','X','J','V','S','D'];
-      dias.forEach(d => {
-        grid.innerHTML += `<div class="sim-header">${d}</div>`;
-      });
-
-      for (let i = 1; i <= 28; i++) {
-        let bg = 'rgba(255,255,255,0.05)';
-        let color = '#76b852'; // Verde de CustodiApp
-        
-        if (pattern === 'semanas') {
-          if (i <= 7 || (i > 14 && i <= 21)) bg = color;
-        } else if (pattern === '223') {
-          const mod = i % 7;
-          if (mod === 1 || mod === 2 || mod === 5 || mod === 6) bg = color;
-        } else if (pattern === 'finesdesemana') {
-          if (i % 7 === 6 || i % 7 === 0) bg = color;
-        }
-
-        grid.innerHTML += `<div class="sim-day" style="background:${bg};">${i}</div>`;
-      }
-    }
-    
-    // Inicializar el simulador
-    actualizarSimulador();
   </script>
 </body>
 </html>
