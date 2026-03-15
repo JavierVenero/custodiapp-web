@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simulador CustodiApp</title>
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#f4f6fb;
+color:#222;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.sub{
+font-size:18px;
+color:#666;
+margin-bottom:30px;
+}
+
+.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:6px;
+margin-top:30px;
+}
+
+.day{
+padding:14px;
+border-radius:8px;
+font-size:14px;
+background:#e9edf4;
+}
+
+.child{
+background:#1abc9c;
+color:white;
+}
+
+.nochild{
+background:#f1c40f;
+color:white;
+}
+
+.legend{
+margin-top:20px;
+font-size:15px;
+}
+
+.legend span{
+display:inline-block;
+margin:5px 10px;
+}
+
+.box{
+width:14px;
+height:14px;
+display:inline-block;
+margin-right:6px;
+border-radius:4px;
+}
+
+.green{
+background:#1abc9c;
+}
+
+.orange{
+background:#f1c40f;
+}
+
+.cta{
+margin-top:50px;
+}
+
+.cta a{
+background:#1abc9c;
+color:white;
+padding:16px 26px;
+font-size:18px;
+border-radius:10px;
+text-decoration:none;
+display:inline-block;
+}
+
+.cta a:hover{
+opacity:0.9;
+}
+
+footer{
+margin-top:40px;
+font-size:14px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Simula tu calendario de custodia</h1>
+
+<div class="sub">
+Así se vería tu año con semanas alternas
+</div>
+
+<div id="calendar" class="calendar"></div>
+
+<div class="legend">
+
+<span><span class="box green"></span>Con niños</span>
+
+<span><span class="box orange"></span>Sin niños</span>
+
+</div>
+
+<div class="cta">
+
+<p>Esto es solo una demo.</p>
+
+<a href="https://play.google.com/store/apps/details?id=com.custodiapp.app">
+Descargar CustodiApp · Pago único 2,99€
+</a>
+
+</div>
+
+<footer>
+
+custodiapp.es
+
+</footer>
+
+</div>
+
+<script>
+
+function generateCalendar(){
+
+const calendar=document.getElementById("calendar");
+
+for(let i=0;i<365;i++){
+
+const day=document.createElement("div");
+
+day.classList.add("day");
+
+if(Math.floor(i/7)%2===0){
+day.classList.add("child");
+}else{
+day.classList.add("nochild");
+}
+
+day.textContent=i+1;
+
+calendar.appendChild(day);
+
+}
+
+}
+
+generateCalendar();
+
+</script>
+
+</body>
+
+</html>
