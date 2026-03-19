@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>CustodiApp | Calendario de custodia compartida</title>
+  <title>CustodiApp | Evita líos en tu custodia compartida</title>
   <meta name="description" content="CustodiApp permite visualizar calendarios de custodia compartida de forma clara. Semanas alternas, vacaciones y excepciones en segundos.">
   <meta name="keywords" content="custodia compartida, calendario custodia compartida, app custodia compartida, semanas alternas custodia, calendario divorcio hijos">
   <meta name="theme-color" content="#0b1020" />
@@ -157,53 +157,58 @@
     .hero-inner{
       padding:36px 22px;
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:18px;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
       align-items:center;
     }
 
     .kicker{
-      color:#d9e7ff;
-      font-size:14px;
+      color:#76b852;
+      font-size:15px;
       font-weight:700;
-      margin-bottom:8px;
+      margin-bottom:12px;
+      display:flex;
+      align-items:center;
+      gap:6px;
     }
 
     h2{
-      margin:14px 0 10px;
-      font-size:44px;
-      line-height:1.05;
+      margin:0 0 14px;
+      font-size:42px;
+      line-height:1.1;
       letter-spacing:-.6px;
     }
 
     .sub{
-      margin:0 0 18px;
+      margin:0 0 24px;
       color:var(--muted);
-      font-size:17px;
+      font-size:18px;
       line-height:1.55;
       max-width:56ch;
     }
 
     .cta{
       display:flex;
+      flex-direction:column;
       gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
+      align-items:flex-start;
       margin-top:12px;
     }
 
     .btn{
       border:0;
       cursor:pointer;
-      padding:14px 18px;
+      padding:18px 24px;
       border-radius:16px;
       font-weight:700;
-      font-size:15px;
+      font-size:16px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       text-decoration:none;
       transition:transform .08s ease;
+      width:100%;
+      text-align:center;
     }
 
     .btn:active{transform:scale(.98)}
@@ -212,50 +217,29 @@
       background:var(--grad);
       color:#0b1020;
       box-shadow:0 18px 40px rgba(0,0,0,.35);
-      min-width:250px;
-    }
-
-    .btn-ghost{
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      border:1px solid var(--stroke);
-    }
-
-    .btn-play{
-      background:rgba(118,184,82,.16);
-      color:var(--text);
-      border:1px solid rgba(118,184,82,.45);
-      box-shadow:0 10px 24px rgba(0,0,0,.18);
     }
 
     .fine{
-      margin-top:10px;
+      margin-top:14px;
       color:var(--muted2);
-      font-size:12.5px;
+      font-size:13px;
       line-height:1.45;
     }
 
-    .side{
+    .hero-image{
       border:1px solid var(--stroke);
       background:rgba(255,255,255,.05);
       border-radius:var(--radius);
-      padding:18px;
+      padding:10px;
       backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
     }
-
-    .side h3{
-      margin:0 0 10px;
-      font-size:18px;
-    }
-
-    .list{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-      font-size:13.5px;
-      color:var(--muted);
+    
+    .hero-image img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
     }
 
     .grid{
@@ -286,56 +270,6 @@
       line-height:1.45;
     }
 
-    .guides{
-      margin-top:18px;
-      border:1px solid var(--stroke);
-      background:rgba(255,255,255,.05);
-      border-radius:var(--radius2);
-      padding:18px;
-      backdrop-filter:blur(10px);
-      box-shadow:var(--shadow);
-    }
-
-    .guides h3{
-      margin:0 0 6px;
-      font-size:22px;
-      letter-spacing:-.3px;
-    }
-
-    .guides p{
-      margin:0 0 14px;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.5;
-    }
-
-    .guides-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:12px;
-    }
-
-    .guide-card{
-      border:1px solid var(--stroke);
-      background:rgba(255,255,255,.05);
-      border-radius:16px;
-      padding:14px;
-    }
-
-    .guide-card strong{
-      display:block;
-      margin-bottom:6px;
-      font-size:14px;
-      color:var(--text);
-    }
-
-    .guide-card span{
-      color:var(--muted);
-      font-size:13.5px;
-      line-height:1.45;
-      display:block;
-    }
-
     .footer{
       margin-top:26px;
       display:flex;
@@ -351,13 +285,11 @@
       .brand{flex-direction:column}
       .hero-inner{grid-template-columns:1fr;padding:24px 16px}
       h2{font-size:36px}
-      .btn-primary{width:100%}
+      .btn{width:100%}
       .grid{grid-template-columns:1fr}
-      .guides-grid{grid-template-columns:1fr}
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-53FDJDYYTK"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-53FDJDYYTK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -390,31 +322,22 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="kicker">✅ Organiza tu año en 1 minuto · Visual · Rápida</div>
-          <h2>Tu custodia, ordenada. Sin estrés.</h2>
+          <div class="kicker">✅ Ya hay familias usándola desde el lanzamiento</div>
+          <h2>Evita errores y líos en tu custodia compartida.</h2>
           <p class="sub">
-            CustodiApp te permite planificar turnos, régimen de visitas y vacaciones de forma visual.
-            <b>Herramienta de uso personal</b>: no necesitas agendas compartidas ni sincronizaciones complejas.
+            Tu calendario claro en segundos. Sin cálculos mentales, sin suscripciones y con total privacidad. Compra una vez, úsala siempre.
           </p>
 
           <div class="cta">
-            <a class="btn btn-primary" href="https://custodiapp.es/calendario-custodia-compartida.html">
-              Ver calendario real
-            </a>
-
-          <a class="btn btn-play"
-   href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
-   target="_blank"
-   rel="noopener"
-   onclick="gtag('event', 'click_play_store', {
-     event_category: 'conversion',
-     event_label: 'boton_descarga'
-   });">
-  Descargar en Google Play
-</a>
-
-            <a class="btn btn-ghost" href="https://custodiapp.es/custodia-compartida.html">
-              Ver guías útiles
+            <a class="btn btn-primary"
+               href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
+               target="_blank"
+               rel="noopener"
+               onclick="gtag('event', 'click_play_store', {
+                 event_category: 'conversion',
+                 event_label: 'boton_descarga'
+               });">
+              Descargar en Google Play · 2,99 € pago único
             </a>
           </div>
 
@@ -423,78 +346,24 @@
           </div>
         </div>
 
-        <aside class="side">
-          <h3>Lo que ganas hoy</h3>
-          <ul class="list">
-            <li><b>Calendario por colores</b> para ver “CON” y “SIN” de un vistazo.</li>
-            <li><b>Patrones automáticos</b> (semanas alternas, 2-2-3, días fijos…).</li>
-            <li><b>Convenio regulador</b>: Navidad, Semana Santa, Verano.</li>
-            <li><b>Excepciones y notas</b> para cambios puntuales.</li>
-            <li><b>Privacidad total</b>: sin cuentas, sin nube, sin anuncios.</li>
-          </ul>
-        </aside>
+        <div class="hero-image">
+          <img src="captura_calendario.png" alt="Pantalla real del calendario de CustodiApp">
+        </div>
       </div>
     </section>
 
     <section class="grid">
       <div class="card">
         <b>Herramienta personal</b>
-        <p>Tú la usas, tú te organizas. Sin agendas relacionadas.</p>
+        <p>Tú la usas, tú te organizas. Sin agendas relacionadas ni sincronizaciones complejas.</p>
       </div>
       <div class="card">
         <b>Sin menús infinitos</b>
-        <p>Configuras tu patrón una vez y tienes cualquier año completo a la vista.</p>
+        <p>Configuras tu patrón una vez y tienes cualquier año completo a la vista al instante.</p>
       </div>
       <div class="card">
-        <b>Backup sencillo</b>
-        <p>Exporta e importa tu base de datos para no perder nada al cambiar de dispositivo.</p>
-      </div>
-    </section>
-
-    <section class="guides">
-      <h3>Guías útiles sobre custodia compartida</h3>
-      <p>Si quieres resolver casos concretos, aquí tienes acceso rápido a las páginas más útiles:</p>
-
-      <div class="guides-grid">
-        <a class="guide-card" href="https://custodiapp.es/custodia-compartida.html">
-          <strong>Custodia compartida</strong>
-          <span>Página madre con una visión general y acceso a todas las guías.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/calendario-custodia-compartida.html">
-          <strong>Calendario de custodia compartida</strong>
-          <span>La página principal sobre capturas, explicación clara y acceso directo a la app.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/semanas-alternas-custodia.html">
-          <strong>Semanas alternas</strong>
-          <span>Cómo aclararte con semanas CON/SIN y el patrón anual.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
-          <strong>Vacaciones en custodia compartida</strong>
-          <span>Verano, Navidad, Semana Santa y excepciones explicadas de forma visual.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/custodia-compartida-navidad.html">
-          <strong>Custodia compartida en Navidad</strong>
-          <span>Bloques navideños, cambios y periodos especiales sin liarte con las fechas.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/custodia-compartida-verano.html">
-          <strong>Custodia compartida en verano</strong>
-          <span>Quincenas, bloques y vacaciones escolares organizados con claridad.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/custodia-compartida-semana-santa.html">
-          <strong>Custodia compartida en Semana Santa</strong>
-          <span>Pasos festivos, periodos cortos y excepciones vistos de forma simple.</span>
-        </a>
-
-        <a class="guide-card" href="https://custodiapp.es/convenio-regulador-custodia-compartida.html">
-          <strong>Convenio regulador y custodia compartida</strong>
-          <span>Cómo aterrizar el convenio en un calendario real con vacaciones, bloques y excepciones.</span>
-        </a>
+        <b>Privacidad total</b>
+        <p>Tus datos son tuyos. Se guardan localmente en tu teléfono, sin servidores de terceros.</p>
       </div>
     </section>
 
