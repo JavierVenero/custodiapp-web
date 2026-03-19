@@ -4,14 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CustodiApp | Custodia compartida clara, visual y sin líos</title>
-  <meta
-    name="description"
-    content="CustodiApp te ayuda a organizar la custodia compartida con claridad: semanas alternas, vacaciones, cambios y excepciones. Pago único de 2,99 €."
-  />
-  <meta
-    name="keywords"
-    content="custodia compartida, calendario custodia compartida, app custodia compartida, vacaciones custodia, calendario familiar"
-  />
+  <meta name="description" content="CustodiApp te ayuda a organizar la custodia compartida con claridad: semanas alternas, vacaciones, cambios y excepciones. Pago único de 2,99 €." />
+  <meta name="keywords" content="custodia compartida, calendario custodia compartida, app custodia compartida, vacaciones custodia, calendario familiar" />
   <meta name="author" content="CustodiApp" />
   <meta name="theme-color" content="#0f172a" />
 
@@ -22,20 +16,9 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta
-    property="og:description"
-    content="Menos cálculo mental, menos errores y más claridad. CustodiApp organiza tu custodia compartida de forma visual y rápida. Pago único de 2,99 €."
-  />
+  <meta property="og:description" content="Menos cálculo mental, menos errores y más claridad. CustodiApp organiza tu custodia compartida de forma visual y rápida. Pago único de 2,99 €." />
   <meta property="og:url" content="https://custodiapp.es/" />
   <meta property="og:image" content="https://custodiapp.es/og.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta
-    name="twitter:description"
-    content="CustodiApp te ayuda a organizar semanas alternas, vacaciones y cambios. Pago único de 2,99 €."
-  />
-  <meta name="twitter:image" content="https://custodiapp.es/og.png" />
 
   <style>
     :root {
@@ -54,13 +37,8 @@
       --header-offset: 104px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -73,21 +51,15 @@
       line-height: 1.5;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
     .container {
       width: min(var(--max), calc(100% - 32px));
       margin: 0 auto;
     }
 
+    /* HEADER */
     .topbar {
       position: sticky;
       top: 0;
@@ -96,7 +68,6 @@
       background: rgba(7, 17, 31, 0.82);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-
     .topbar-inner {
       display: flex;
       align-items: center;
@@ -104,7 +75,6 @@
       gap: 18px;
       min-height: 78px;
     }
-
     .brand {
       display: flex;
       align-items: center;
@@ -112,29 +82,21 @@
       min-width: 0;
       flex-shrink: 0;
     }
-
     .brand img {
       width: 44px;
       height: 44px;
       object-fit: contain;
       border-radius: 12px;
     }
-
-    .brand-text {
-      min-width: 0;
-    }
-
     .brand-title {
       font-size: 1.1rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
-
     .brand-subtitle {
       font-size: 0.9rem;
       color: var(--muted);
     }
-
     .top-nav {
       display: flex;
       align-items: center;
@@ -143,18 +105,13 @@
       margin-left: auto;
       margin-right: 8px;
     }
-
     .top-nav a {
       color: var(--muted);
       font-size: 0.94rem;
       font-weight: 700;
       transition: 0.15s ease;
     }
-
-    .top-nav a:hover {
-      color: #fff;
-    }
-
+    .top-nav a:hover { color: #fff; }
     .top-actions {
       display: flex;
       align-items: center;
@@ -163,7 +120,6 @@
       justify-content: flex-end;
       flex-shrink: 0;
     }
-
     .price-pill {
       padding: 10px 14px;
       border: 1px solid var(--line);
@@ -175,6 +131,7 @@
       white-space: nowrap;
     }
 
+    /* BOTONES */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -190,40 +147,33 @@
       border: 0;
       text-align: center;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, var(--primary) 0%, #1f6bd0 100%);
       color: #fff;
       box-shadow: 0 16px 34px rgba(47, 128, 237, 0.22);
     }
-
     .btn-primary:hover {
       transform: translateY(-1px);
       background: linear-gradient(135deg, var(--primary-hover) 0%, #1b5cb1 100%);
     }
-
     .btn-secondary {
       background: rgba(255, 255, 255, 0.06);
       color: var(--text);
       border: 1px solid var(--line);
     }
-
     .btn-secondary:hover {
       transform: translateY(-1px);
       background: rgba(255, 255, 255, 0.09);
     }
 
-    .hero {
-      padding: 52px 0 28px;
-    }
-
+    /* HERO */
+    .hero { padding: 52px 0 28px; }
     .hero-grid {
       display: grid;
       grid-template-columns: 1.02fr 0.98fr;
       gap: 34px;
       align-items: center;
     }
-
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -237,7 +187,6 @@
       font-weight: 700;
       margin-bottom: 18px;
     }
-
     h1 {
       margin: 0 0 16px;
       font-size: clamp(2.2rem, 4.4vw, 4rem);
@@ -245,14 +194,12 @@
       letter-spacing: -0.04em;
       max-width: 12ch;
     }
-
     .hero-lead {
       margin: 0 0 24px;
       font-size: 1.08rem;
       color: var(--muted);
       max-width: 620px;
     }
-
     .hero-points {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -261,7 +208,6 @@
       padding: 0;
       list-style: none;
     }
-
     .hero-points a {
       display: block;
       padding: 12px 14px;
@@ -272,13 +218,11 @@
       font-weight: 600;
       transition: 0.18s ease;
     }
-
     .hero-points a:hover {
       transform: translateY(-1px);
       border-color: rgba(47, 128, 237, 0.45);
       background: rgba(255, 255, 255, 0.08);
     }
-
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
@@ -286,16 +230,13 @@
       align-items: center;
       margin-bottom: 18px;
     }
-
     .microproof {
       color: var(--muted);
       font-size: 0.95rem;
     }
+    .microproof strong { color: #ffffff; }
 
-    .microproof strong {
-      color: #ffffff;
-    }
-
+    /* GALERÍA INTERACTIVA */
     .hero-card {
       padding: 18px;
       background: linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.04) 100%);
@@ -303,7 +244,6 @@
       border-radius: 28px;
       box-shadow: var(--shadow);
     }
-
     .screen-main {
       border-radius: 22px;
       overflow: hidden;
@@ -311,13 +251,11 @@
       background: #0c1526;
       margin-bottom: 14px;
     }
-
     .screen-thumbs {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
-
     .screen-thumbs button {
       border: 1px solid rgba(255,255,255,0.09);
       background: rgba(255,255,255,0.04);
@@ -326,92 +264,37 @@
       cursor: pointer;
       transition: 0.15s ease;
     }
-
     .screen-thumbs button:hover,
     .screen-thumbs button.active {
       border-color: rgba(47, 128, 237, 0.60);
       background: rgba(47, 128, 237, 0.09);
     }
+    .screen-thumbs img { border-radius: 10px; }
 
-    .screen-thumbs img {
-      border-radius: 10px;
-    }
-
-    .trust-strip {
-      padding: 8px 0 34px;
-    }
-
-    .trust-box {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .trust-item {
-      display: block;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--line);
-      text-align: center;
-      transition: 0.18s ease;
-    }
-
-    .trust-item:hover {
-      transform: translateY(-1px);
-      border-color: rgba(47, 128, 237, 0.4);
-      background: rgba(255,255,255,0.07);
-    }
-
-    .trust-number {
-      font-size: 1.55rem;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 6px;
-    }
-
-    .trust-label {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
+    /* SECCIONES Y GRID */
     .section {
       padding: 34px 0;
       scroll-margin-top: var(--header-offset);
     }
-
     .section-title {
       margin: 0 0 10px;
       font-size: clamp(1.75rem, 3vw, 2.5rem);
       line-height: 1.08;
       letter-spacing: -0.03em;
     }
-
     .section-lead {
       margin: 0 0 28px;
       color: var(--muted);
       max-width: 760px;
       font-size: 1.03rem;
     }
-
-    .pain-grid,
-    .benefits-grid,
-    .steps-grid,
-    .detail-grid {
+    .pain-grid, .benefits-grid, .steps-grid, .detail-grid {
       display: grid;
       gap: 16px;
     }
-
-    .pain-grid,
-    .benefits-grid,
-    .steps-grid {
+    .pain-grid, .benefits-grid, .steps-grid, .detail-grid {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    .detail-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     .card {
       padding: 22px;
       border-radius: 22px;
@@ -419,108 +302,58 @@
       border: 1px solid var(--line);
       box-shadow: 0 12px 26px rgba(0,0,0,0.12);
     }
-
     .card h3 {
       margin: 0 0 10px;
       font-size: 1.14rem;
       line-height: 1.2;
       letter-spacing: -0.02em;
     }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
+    .card p { margin: 0; color: var(--muted); }
     .card-link {
       display: block;
       transition: 0.18s ease;
     }
-
     .card-link:hover {
       transform: translateY(-1px);
       border-color: rgba(47, 128, 237, 0.45);
       background: rgba(255,255,255,0.07);
     }
 
-    .step-number {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(47, 128, 237, 0.15);
-      color: #dcecff;
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .screens-section {
+    /* NUEVO: REJILLA DE GUÍAS (LA RED DE PESCA) */
+    .guides-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
-
-    .screens-copy {
-      padding: 26px;
-      border-radius: 24px;
+    .guide-card {
+      display: block;
+      padding: 20px;
+      border-radius: 20px;
       background: rgba(255,255,255,0.05);
       border: 1px solid var(--line);
+      transition: 0.18s ease;
+      text-decoration: none;
     }
-
-    .screens-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+    .guide-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(47, 128, 237, 0.45);
+      background: rgba(255,255,255,0.08);
     }
-
-    .screens-gallery .card {
-      padding: 12px;
-    }
-
-    .screens-gallery img {
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .quote-box {
-      padding: 24px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(39, 174, 96, 0.10) 0%, rgba(47, 128, 237, 0.06) 100%);
-      border: 1px solid rgba(255,255,255,0.09);
-    }
-
-    .quote-box p {
-      margin: 0;
+    .guide-card strong {
+      display: block;
       font-size: 1.1rem;
-      line-height: 1.55;
-    }
-
-    .quote-box strong {
       color: #fff;
+      margin-bottom: 6px;
     }
-
-    .detail-card {
-      min-height: 100%;
-    }
-
-    .detail-card ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
+    .guide-card span {
       color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      display: block;
     }
 
-    .detail-card li + li {
-      margin-top: 8px;
-    }
-
-    .final-cta {
-      padding: 34px 0 70px;
-      scroll-margin-top: var(--header-offset);
-    }
-
+    /* CTA FINAL */
+    .final-cta { padding: 34px 0 70px; }
     .cta-panel {
       padding: 34px;
       border-radius: 28px;
@@ -529,21 +362,16 @@
       box-shadow: var(--shadow);
       text-align: center;
     }
-
     .cta-panel h2 {
       margin: 0 0 12px;
       font-size: clamp(1.9rem, 3.2vw, 2.9rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
     }
-
     .cta-panel p {
       margin: 0 auto 24px;
       max-width: 760px;
       color: var(--muted);
       font-size: 1.03rem;
     }
-
     .cta-row {
       display: flex;
       justify-content: center;
@@ -552,10 +380,8 @@
       margin-bottom: 14px;
     }
 
-    .footer {
-      padding: 0 0 34px;
-    }
-
+    /* FOOTER */
+    .footer { padding: 0 0 34px; }
     .footer-inner {
       display: flex;
       justify-content: space-between;
@@ -567,84 +393,32 @@
       border-top: 1px solid rgba(255,255,255,0.07);
       padding-top: 22px;
     }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer a:hover { color: #fff; }
 
-    .footer-links {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 1180px) {
-      .top-nav {
-        display: none;
-      }
-    }
-
+    /* RESPONSIVE */
+    @media (max-width: 1180px) { .top-nav { display: none; } }
     @media (max-width: 1024px) {
-      .hero-grid,
-      .screens-section {
-        grid-template-columns: 1fr;
-      }
-
-      .pain-grid,
-      .benefits-grid,
-      .steps-grid,
-      .trust-box,
-      .detail-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .screens-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      .hero-grid { grid-template-columns: 1fr; }
+      .pain-grid, .benefits-grid, .steps-grid, .detail-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 700px) {
-      .topbar-inner {
-        align-items: flex-start;
-        padding: 12px 0;
-      }
-
-      .top-actions {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero {
-        padding-top: 28px;
-      }
-
-      .hero-points,
-      .pain-grid,
-      .benefits-grid,
-      .steps-grid,
-      .trust-box,
-      .screens-gallery,
-      .detail-grid {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        max-width: none;
-      }
-
-      .container {
-        width: min(var(--max), calc(100% - 22px));
-      }
-
-      .cta-panel,
-      .hero-card,
-      .screens-copy,
-      .card {
-        border-radius: 20px;
-      }
+      .topbar-inner { align-items: flex-start; padding: 12px 0; }
+      .top-actions { width: 100%; justify-content: flex-start; }
+      .hero-points, .pain-grid, .benefits-grid, .steps-grid, .detail-grid, .guides-grid { grid-template-columns: 1fr; }
     }
   </style>
 
+  <!-- GOOGLE ANALYTICS (NO PERDER DATOS) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-53FDJDYYTK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-53FDJDYYTK');
+  </script>
+
+  <!-- SCHEMA ORG SEO -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -663,6 +437,7 @@
   </script>
 </head>
 <body>
+  <!-- BARRA SUPERIOR FIJA -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#inicio" aria-label="Ir al inicio de CustodiApp">
@@ -672,78 +447,46 @@
           <div class="brand-subtitle">Custodia compartida clara, visual y rápida</div>
         </div>
       </a>
-
       <nav class="top-nav" aria-label="Navegación principal">
-        <a href="#semanas">Semanas</a>
-        <a href="#vacaciones">Vacaciones</a>
-        <a href="#cambios">Cambios</a>
+        <a href="#guias">Guías y Casos</a>
         <a href="#como-funciona">Cómo funciona</a>
       </nav>
-
       <div class="top-actions">
         <div class="price-pill">Pago único · 2,99 €</div>
-        <a
-          class="btn btn-primary"
-          href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Descargar en Google Play
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
+          Descargar App
         </a>
       </div>
     </div>
   </header>
 
   <main id="inicio">
+    <!-- HERO PRINCIPAL CON GALERÍA -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Menos cálculo mental. Menos líos. Más claridad.</div>
-
           <h1>Tu custodia compartida, clara y sin líos</h1>
-
           <p class="hero-lead">
-            CustodiApp te ayuda a organizar semanas alternas, vacaciones, cambios y excepciones
-            de forma visual y rápida. Una app pensada para ver tu calendario con claridad y
-            dejar de hacer cuentas de cabeza.
+            CustodiApp te ayuda a organizar semanas alternas, vacaciones, cambios y excepciones de forma visual y rápida. Una app pensada para ver tu calendario con claridad y dejar de hacer cuentas de cabeza.
           </p>
-
-          <div class="hero-points">
-            <a href="#semanas">Calendario visual y claro</a>
-            <a href="#vacaciones">Vacaciones y reglas de convenio</a>
-            <a href="#cambios">Cambios y excepciones</a>
-            <a href="#descargar">Pago único de 2,99 €</a>
-          </div>
-
           <div class="hero-actions">
-            <a
-              class="btn btn-primary"
-              href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
               Descargar app · 2,99 €
             </a>
-
-            <a class="btn btn-secondary" href="#como-funciona">
-              Ver cómo funciona
+            <a class="btn btn-secondary" href="#guias">
+              Ver Guías y Casos
             </a>
           </div>
-
           <div class="microproof">
-            <strong>Ya está en uso real.</strong> Las primeras compras llegaron el mismo día del lanzamiento.
+            <strong>✅ Ya está en uso real.</strong> Las primeras compras llegaron el mismo día del lanzamiento.
           </div>
         </div>
 
         <div class="hero-card" aria-label="Vista previa de la app">
           <div class="screen-main">
-            <img
-              id="mainScreen"
-              src="screen-1.png"
-              alt="Pantallazo principal de CustodiApp con calendario anual"
-            />
+            <img id="mainScreen" src="screen-1.png" alt="Pantallazo principal de CustodiApp con calendario anual" />
           </div>
-
           <div class="screen-thumbs">
             <button class="active" type="button" data-screen="screen-1.png" data-alt="Vista anual del calendario de custodia compartida">
               <img src="screen-1.png" alt="Miniatura de vista anual" />
@@ -759,314 +502,83 @@
       </div>
     </section>
 
-    <section class="trust-strip">
-      <div class="container">
-        <div class="trust-box">
-          <a class="trust-item" href="#descargar">
-            <div class="trust-number">2,99 €</div>
-            <div class="trust-label">Pago único, sin mensualidades.</div>
-          </a>
-          <a class="trust-item" href="#como-funciona">
-            <div class="trust-number">Visual</div>
-            <div class="trust-label">Entiendes tu calendario en segundos.</div>
-          </a>
-          <a class="trust-item" href="#vacaciones">
-            <div class="trust-number">Claro</div>
-            <div class="trust-label">Semanas, vacaciones y cambios bien ordenados.</div>
-          </a>
-          <a class="trust-item" href="#descargar">
-            <div class="trust-number">Android</div>
-            <div class="trust-label">Disponible en Google Play.</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="problema">
-      <div class="container">
-        <h2 class="section-title">Lo que te ayuda a evitar</h2>
-        <p class="section-lead">
-          CustodiApp está pensada para hacer más fácil algo que muchas veces termina siendo
-          confuso: fechas, cambios, vacaciones y decisiones que no deberían depender de
-          estar calculándolo todo mentalmente.
-        </p>
-
-        <div class="pain-grid">
-          <a class="card card-link" href="#semanas">
-            <h3>Menos errores</h3>
-            <p>
-              Evita confundirte con semanas alternas, vacaciones, puentes y cambios puntuales.
-            </p>
-          </a>
-
-          <a class="card card-link" href="#como-funciona">
-            <h3>Menos cálculo mental</h3>
-            <p>
-              Dejas de contar días, fines de semana y rotaciones una y otra vez.
-            </p>
-          </a>
-
-          <a class="card card-link" href="#cambios">
-            <h3>Más claridad</h3>
-            <p>
-              Todo queda más visual, más ordenado y más fácil de consultar cuando hace falta.
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <!-- QUÉ EVITAS Y QUÉ HACE (RESUMEN DEL NUEVO CÓDIGO) -->
     <section class="section" id="como-funciona">
       <div class="container">
-        <h2 class="section-title">Qué hace la app</h2>
-        <p class="section-lead">
-          Lo importante, sin adornos: ayudarte a ver tu organización de custodia de una forma clara,
-          rápida y útil en el día a día.
-        </p>
-
-        <div class="benefits-grid">
-          <a class="card card-link" href="#semanas">
-            <h3>Semanas alternas claras</h3>
-            <p>
-              Visualiza la custodia de forma sencilla y rápida, con un calendario entendible de verdad.
-            </p>
-          </a>
-
-          <a class="card card-link" href="#vacaciones">
-            <h3>Vacaciones y convenios</h3>
-            <p>
-              Ajusta reglas y periodos especiales sin tener que rehacer todo cada vez.
-            </p>
-          </a>
-
-          <a class="card card-link" href="#cambios">
-            <h3>Excepciones y cambios</h3>
-            <p>
-              Gestiona modificaciones puntuales sin perder el hilo general del calendario.
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="semanas">
-      <div class="container">
-        <h2 class="section-title">Semanas alternas</h2>
-        <p class="section-lead">
-          La app te permite ver tu organización base de forma directa, sin tener que pensar
-          cada vez en qué semana toca o cómo encaja la rotación.
-        </p>
-
-        <div class="detail-grid">
-          <article class="card detail-card">
-            <h3>Vista anual</h3>
-            <p>Una imagen general para entender rápido cómo queda distribuido todo el año.</p>
-            <ul>
-              <li>Consulta visual inmediata</li>
-              <li>Menos dudas en el día a día</li>
-              <li>Más fácil compartir o revisar</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Patrón claro</h3>
-            <p>La lógica de semanas alternas deja de estar en tu cabeza y pasa a estar bien ordenada.</p>
-            <ul>
-              <li>Menos errores por despiste</li>
-              <li>Menos cálculo repetido</li>
-              <li>Más seguridad al consultar</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Consulta rápida</h3>
-            <p>Abres, miras y resuelves. Sin volver a revisar mensajes o hacer cuentas a mano.</p>
-            <ul>
-              <li>Calendario entendible</li>
-              <li>Más agilidad</li>
-              <li>Más claridad</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="vacaciones">
-      <div class="container">
-        <h2 class="section-title">Vacaciones y reglas de convenio</h2>
-        <p class="section-lead">
-          Cuando llegan vacaciones, festivos o periodos especiales es cuando más se agradece
-          tener las reglas claras y bien reflejadas.
-        </p>
-
-        <div class="detail-grid">
-          <article class="card detail-card">
-            <h3>Vacaciones mejor organizadas</h3>
-            <p>Introduce periodos especiales sin desmontar toda la lógica del calendario.</p>
-            <ul>
-              <li>Semana Santa</li>
-              <li>Verano</li>
-              <li>Navidad y otros periodos</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Convenios y ajustes</h3>
-            <p>La app te ayuda a adaptar reglas para que el calendario refleje mejor la realidad.</p>
-            <ul>
-              <li>Reglas configurables</li>
-              <li>Más orden</li>
-              <li>Menos improvisación</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Todo más claro</h3>
-            <p>Cuando el calendario está bien montado, consultar un periodo especial deja de ser un lío.</p>
-            <ul>
-              <li>Menos dudas</li>
-              <li>Menos vueltas</li>
-              <li>Consulta más rápida</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="cambios">
-      <div class="container">
-        <h2 class="section-title">Cambios y excepciones</h2>
-        <p class="section-lead">
-          La vida real no siempre sigue el patrón perfecto. Por eso la app también está pensada
-          para reflejar cambios puntuales sin perder el orden general.
-        </p>
-
-        <div class="detail-grid">
-          <article class="card detail-card">
-            <h3>Cambios concretos</h3>
-            <p>Puedes ajustar situaciones puntuales sin rehacer todo desde cero.</p>
-            <ul>
-              <li>Cambios de días</li>
-              <li>Excepciones puntuales</li>
-              <li>Ajustes prácticos</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Más flexibilidad</h3>
-            <p>La organización sigue siendo clara aunque haya movimientos o modificaciones temporales.</p>
-            <ul>
-              <li>Más control</li>
-              <li>Más orden</li>
-              <li>Menos confusión</li>
-            </ul>
-          </article>
-
-          <article class="card detail-card">
-            <h3>Sin perder el hilo</h3>
-            <p>La excepción no se come el calendario. Todo sigue siendo fácil de consultar.</p>
-            <ul>
-              <li>Estructura visual</li>
-              <li>Consulta sencilla</li>
-              <li>Mejor seguimiento</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container screens-section">
-        <div class="screens-copy">
-          <h2 class="section-title">Se entiende al verla</h2>
-          <p class="section-lead">
-            El valor de CustodiApp está en eso: abres la app y entiendes tu calendario de un vistazo,
-            sin explicaciones eternas ni menús innecesarios.
-          </p>
-
-          <div class="quote-box">
-            <p>
-              <strong>Custodia compartida más clara, más visual y más fácil de consultar.</strong><br />
-              Sin suscripción. Sin ruido. Solo lo que necesitas para organizarte mejor.
-            </p>
-          </div>
-        </div>
-
-        <div class="screens-gallery">
+        <h2 class="section-title">Lo que te ayuda a evitar</h2>
+        <p class="section-lead">CustodiApp está pensada para hacer más fácil algo que muchas veces termina siendo confuso: fechas, cambios, vacaciones y cálculos mentales.</p>
+        <div class="pain-grid">
           <div class="card">
-            <img src="screen-1.png" alt="Vista anual de CustodiApp" />
+            <h3>Menos errores</h3>
+            <p>Evita confundirte con semanas alternas, vacaciones, puentes y cambios puntuales.</p>
           </div>
           <div class="card">
-            <img src="screen-2.png" alt="Pantalla de reglas de convenio en CustodiApp" />
+            <h3>Menos cálculo mental</h3>
+            <p>Dejas de contar días, fines de semana y rotaciones una y otra vez.</p>
           </div>
           <div class="card">
-            <img src="screen-3.png" alt="Pantalla de patrón de 14 días en CustodiApp" />
+            <h3>Más claridad</h3>
+            <p>Todo queda más visual, más ordenado y más fácil de consultar en segundos.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- LA RED DE PESCA: TODAS TUS GUÍAS Y ENLACES (ESTRATEGIA SEO) -->
+    <section class="section" id="guias">
       <div class="container">
-        <h2 class="section-title">Cómo funciona en 3 pasos</h2>
-        <p class="section-lead">
-          Lo justo para que te sirva desde el principio.
-        </p>
+        <h2 class="section-title">Guías útiles sobre custodia compartida</h2>
+        <p class="section-lead">Si quieres resolver casos concretos o entender cómo funciona la app para tu situación, aquí tienes acceso rápido a nuestras guías detalladas:</p>
 
-        <div class="steps-grid">
-          <article class="card">
-            <div class="step-number">1</div>
-            <h3>Configura tu patrón</h3>
-            <p>
-              Define la base de tu custodia: semanas, rotación o reglas que necesites.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="step-number">2</div>
-            <h3>Añade vacaciones y cambios</h3>
-            <p>
-              Introduce excepciones y periodos especiales sin desmontar todo el calendario.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="step-number">3</div>
-            <h3>Consulta y decide rápido</h3>
-            <p>
-              Mira el calendario y resuelve en segundos lo que antes te obligaba a revisar varias veces.
-            </p>
-          </article>
+        <div class="guides-grid">
+          <a class="guide-card" href="https://custodiapp.es/custodia-compartida.html">
+            <strong>Custodia compartida</strong>
+            <span>Página madre con una visión general y acceso a todas las guías y consejos.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/calendario-custodia-compartida.html">
+            <strong>Calendario de custodia compartida</strong>
+            <span>La página principal sobre capturas, explicación clara y acceso directo a la app.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/semanas-alternas-custodia.html">
+            <strong>Semanas alternas</strong>
+            <span>Cómo aclararte con semanas CON/SIN y organizar el patrón anual.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
+            <strong>Vacaciones en custodia compartida</strong>
+            <span>Verano, Navidad, Semana Santa y excepciones explicadas de forma visual.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-navidad.html">
+            <strong>Custodia compartida en Navidad</strong>
+            <span>Bloques navideños, cambios y periodos especiales sin liarte con las fechas.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-verano.html">
+            <strong>Custodia compartida en verano</strong>
+            <span>Quincenas, bloques y vacaciones escolares organizados con claridad absoluta.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-semana-santa.html">
+            <strong>Custodia compartida en Semana Santa</strong>
+            <span>Pasos festivos, periodos cortos y excepciones vistos de forma simple.</span>
+          </a>
+          <a class="guide-card" href="https://custodiapp.es/convenio-regulador-custodia-compartida.html">
+            <strong>Convenio regulador</strong>
+            <span>Cómo aterrizar el convenio en un calendario real con vacaciones y bloques.</span>
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- CTA FINAL -->
     <section class="final-cta" id="descargar">
       <div class="container">
         <div class="cta-panel">
           <h2>Claridad para tu custodia compartida</h2>
-          <p>
-            CustodiApp ya está disponible en Google Play por <strong>2,99 € de pago único</strong>.
-            Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.
-          </p>
-
+          <p>CustodiApp ya está disponible en Google Play por <strong>2,99 € de pago único</strong>. Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.</p>
           <div class="cta-row">
-            <a
-              class="btn btn-primary"
-              href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
               Descargar en Google Play
             </a>
-            <a class="btn btn-secondary" href="#como-funciona">
-              Ver funciones
-            </a>
           </div>
-
-          <div class="microproof">
-            Pago único · Sin mensualidades · Disponible para Android
-          </div>
+          <div class="microproof">Pago único · Sin mensualidades · Disponible para Android</div>
         </div>
       </div>
     </section>
@@ -1074,24 +586,19 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© 2026 CustodiApp</div>
+      <div>© <span id="year"></span> CustodiApp · Las Palmas de Gran Canaria</div>
       <div class="footer-links">
         <a href="privacy.html">Política de privacidad</a>
-        <a href="#como-funciona">Funciones</a>
-        <a href="#vacaciones">Vacaciones</a>
-        <a href="#cambios">Cambios</a>
-        <a
-          href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Play
-        </a>
+        <a href="#guias">Guías útiles</a>
+        <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a>
       </div>
     </div>
   </footer>
 
+  <!-- SCRIPT PARA LA GALERÍA Y EL AÑO DEL FOOTER -->
   <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
     const mainScreen = document.getElementById("mainScreen");
     const thumbButtons = document.querySelectorAll(".screen-thumbs button");
 
