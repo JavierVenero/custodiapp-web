@@ -51,6 +51,7 @@
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       --radius: 22px;
       --max: 1180px;
+      --header-offset: 104px;
     }
 
     * {
@@ -92,7 +93,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(7, 17, 31, 0.78);
+      background: rgba(7, 17, 31, 0.82);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
@@ -100,7 +101,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
       min-height: 78px;
     }
 
@@ -109,6 +110,7 @@
       align-items: center;
       gap: 12px;
       min-width: 0;
+      flex-shrink: 0;
     }
 
     .brand img {
@@ -133,12 +135,33 @@
       color: var(--muted);
     }
 
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: 8px;
+    }
+
+    .top-nav a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: 0.15s ease;
+    }
+
+    .top-nav a:hover {
+      color: #fff;
+    }
+
     .top-actions {
       display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
       justify-content: flex-end;
+      flex-shrink: 0;
     }
 
     .price-pill {
@@ -239,13 +262,21 @@
       list-style: none;
     }
 
-    .hero-points li {
+    .hero-points a {
+      display: block;
       padding: 12px 14px;
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--line);
       color: #e8f0fb;
       font-weight: 600;
+      transition: 0.18s ease;
+    }
+
+    .hero-points a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(47, 128, 237, 0.45);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .hero-actions {
@@ -317,11 +348,19 @@
     }
 
     .trust-item {
+      display: block;
       padding: 18px;
       border-radius: 18px;
       background: rgba(255,255,255,0.05);
       border: 1px solid var(--line);
       text-align: center;
+      transition: 0.18s ease;
+    }
+
+    .trust-item:hover {
+      transform: translateY(-1px);
+      border-color: rgba(47, 128, 237, 0.4);
+      background: rgba(255,255,255,0.07);
     }
 
     .trust-number {
@@ -338,6 +377,7 @@
 
     .section {
       padding: 34px 0;
+      scroll-margin-top: var(--header-offset);
     }
 
     .section-title {
@@ -356,20 +396,19 @@
 
     .pain-grid,
     .benefits-grid,
-    .steps-grid {
+    .steps-grid,
+    .detail-grid {
       display: grid;
       gap: 16px;
     }
 
-    .pain-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .benefits-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
+    .pain-grid,
+    .benefits-grid,
     .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .detail-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -391,6 +430,17 @@
     .card p {
       margin: 0;
       color: var(--muted);
+    }
+
+    .card-link {
+      display: block;
+      transition: 0.18s ease;
+    }
+
+    .card-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(47, 128, 237, 0.45);
+      background: rgba(255,255,255,0.07);
     }
 
     .step-number {
@@ -452,8 +502,23 @@
       color: #fff;
     }
 
+    .detail-card {
+      min-height: 100%;
+    }
+
+    .detail-card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .detail-card li + li {
+      margin-top: 8px;
+    }
+
     .final-cta {
       padding: 34px 0 70px;
+      scroll-margin-top: var(--header-offset);
     }
 
     .cta-panel {
@@ -513,6 +578,12 @@
       color: #fff;
     }
 
+    @media (max-width: 1180px) {
+      .top-nav {
+        display: none;
+      }
+    }
+
     @media (max-width: 1024px) {
       .hero-grid,
       .screens-section {
@@ -522,7 +593,8 @@
       .pain-grid,
       .benefits-grid,
       .steps-grid,
-      .trust-box {
+      .trust-box,
+      .detail-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -551,7 +623,8 @@
       .benefits-grid,
       .steps-grid,
       .trust-box,
-      .screens-gallery {
+      .screens-gallery,
+      .detail-grid {
         grid-template-columns: 1fr;
       }
 
@@ -600,6 +673,13 @@
         </div>
       </a>
 
+      <nav class="top-nav" aria-label="Navegación principal">
+        <a href="#semanas">Semanas</a>
+        <a href="#vacaciones">Vacaciones</a>
+        <a href="#cambios">Cambios</a>
+        <a href="#como-funciona">Cómo funciona</a>
+      </nav>
+
       <div class="top-actions">
         <div class="price-pill">Pago único · 2,99 €</div>
         <a
@@ -628,12 +708,12 @@
             dejar de hacer cuentas de cabeza.
           </p>
 
-          <ul class="hero-points">
-            <li>Calendario visual y claro</li>
-            <li>Vacaciones y reglas de convenio</li>
-            <li>Cambios y excepciones</li>
-            <li>Pago único de 2,99 €</li>
-          </ul>
+          <div class="hero-points">
+            <a href="#semanas">Calendario visual y claro</a>
+            <a href="#vacaciones">Vacaciones y reglas de convenio</a>
+            <a href="#cambios">Cambios y excepciones</a>
+            <a href="#descargar">Pago único de 2,99 €</a>
+          </div>
 
           <div class="hero-actions">
             <a
@@ -682,22 +762,22 @@
     <section class="trust-strip">
       <div class="container">
         <div class="trust-box">
-          <div class="trust-item">
+          <a class="trust-item" href="#descargar">
             <div class="trust-number">2,99 €</div>
             <div class="trust-label">Pago único, sin mensualidades.</div>
-          </div>
-          <div class="trust-item">
+          </a>
+          <a class="trust-item" href="#como-funciona">
             <div class="trust-number">Visual</div>
             <div class="trust-label">Entiendes tu calendario en segundos.</div>
-          </div>
-          <div class="trust-item">
+          </a>
+          <a class="trust-item" href="#vacaciones">
             <div class="trust-number">Claro</div>
             <div class="trust-label">Semanas, vacaciones y cambios bien ordenados.</div>
-          </div>
-          <div class="trust-item">
+          </a>
+          <a class="trust-item" href="#descargar">
             <div class="trust-number">Android</div>
             <div class="trust-label">Disponible en Google Play.</div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -712,26 +792,26 @@
         </p>
 
         <div class="pain-grid">
-          <article class="card">
+          <a class="card card-link" href="#semanas">
             <h3>Menos errores</h3>
             <p>
               Evita confundirte con semanas alternas, vacaciones, puentes y cambios puntuales.
             </p>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card card-link" href="#como-funciona">
             <h3>Menos cálculo mental</h3>
             <p>
               Dejas de contar días, fines de semana y rotaciones una y otra vez.
             </p>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card card-link" href="#cambios">
             <h3>Más claridad</h3>
             <p>
               Todo queda más visual, más ordenado y más fácil de consultar cuando hace falta.
             </p>
-          </article>
+          </a>
         </div>
       </div>
     </section>
@@ -745,25 +825,151 @@
         </p>
 
         <div class="benefits-grid">
-          <article class="card">
+          <a class="card card-link" href="#semanas">
             <h3>Semanas alternas claras</h3>
             <p>
               Visualiza la custodia de forma sencilla y rápida, con un calendario entendible de verdad.
             </p>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card card-link" href="#vacaciones">
             <h3>Vacaciones y convenios</h3>
             <p>
               Ajusta reglas y periodos especiales sin tener que rehacer todo cada vez.
             </p>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card card-link" href="#cambios">
             <h3>Excepciones y cambios</h3>
             <p>
               Gestiona modificaciones puntuales sin perder el hilo general del calendario.
             </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="semanas">
+      <div class="container">
+        <h2 class="section-title">Semanas alternas</h2>
+        <p class="section-lead">
+          La app te permite ver tu organización base de forma directa, sin tener que pensar
+          cada vez en qué semana toca o cómo encaja la rotación.
+        </p>
+
+        <div class="detail-grid">
+          <article class="card detail-card">
+            <h3>Vista anual</h3>
+            <p>Una imagen general para entender rápido cómo queda distribuido todo el año.</p>
+            <ul>
+              <li>Consulta visual inmediata</li>
+              <li>Menos dudas en el día a día</li>
+              <li>Más fácil compartir o revisar</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Patrón claro</h3>
+            <p>La lógica de semanas alternas deja de estar en tu cabeza y pasa a estar bien ordenada.</p>
+            <ul>
+              <li>Menos errores por despiste</li>
+              <li>Menos cálculo repetido</li>
+              <li>Más seguridad al consultar</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Consulta rápida</h3>
+            <p>Abres, miras y resuelves. Sin volver a revisar mensajes o hacer cuentas a mano.</p>
+            <ul>
+              <li>Calendario entendible</li>
+              <li>Más agilidad</li>
+              <li>Más claridad</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vacaciones">
+      <div class="container">
+        <h2 class="section-title">Vacaciones y reglas de convenio</h2>
+        <p class="section-lead">
+          Cuando llegan vacaciones, festivos o periodos especiales es cuando más se agradece
+          tener las reglas claras y bien reflejadas.
+        </p>
+
+        <div class="detail-grid">
+          <article class="card detail-card">
+            <h3>Vacaciones mejor organizadas</h3>
+            <p>Introduce periodos especiales sin desmontar toda la lógica del calendario.</p>
+            <ul>
+              <li>Semana Santa</li>
+              <li>Verano</li>
+              <li>Navidad y otros periodos</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Convenios y ajustes</h3>
+            <p>La app te ayuda a adaptar reglas para que el calendario refleje mejor la realidad.</p>
+            <ul>
+              <li>Reglas configurables</li>
+              <li>Más orden</li>
+              <li>Menos improvisación</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Todo más claro</h3>
+            <p>Cuando el calendario está bien montado, consultar un periodo especial deja de ser un lío.</p>
+            <ul>
+              <li>Menos dudas</li>
+              <li>Menos vueltas</li>
+              <li>Consulta más rápida</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cambios">
+      <div class="container">
+        <h2 class="section-title">Cambios y excepciones</h2>
+        <p class="section-lead">
+          La vida real no siempre sigue el patrón perfecto. Por eso la app también está pensada
+          para reflejar cambios puntuales sin perder el orden general.
+        </p>
+
+        <div class="detail-grid">
+          <article class="card detail-card">
+            <h3>Cambios concretos</h3>
+            <p>Puedes ajustar situaciones puntuales sin rehacer todo desde cero.</p>
+            <ul>
+              <li>Cambios de días</li>
+              <li>Excepciones puntuales</li>
+              <li>Ajustes prácticos</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Más flexibilidad</h3>
+            <p>La organización sigue siendo clara aunque haya movimientos o modificaciones temporales.</p>
+            <ul>
+              <li>Más control</li>
+              <li>Más orden</li>
+              <li>Menos confusión</li>
+            </ul>
+          </article>
+
+          <article class="card detail-card">
+            <h3>Sin perder el hilo</h3>
+            <p>La excepción no se come el calendario. Todo sigue siendo fácil de consultar.</p>
+            <ul>
+              <li>Estructura visual</li>
+              <li>Consulta sencilla</li>
+              <li>Mejor seguimiento</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -853,8 +1059,8 @@
             >
               Descargar en Google Play
             </a>
-            <a class="btn btn-secondary" href="calendario-custodia-compartida.html">
-              Ver landing específica
+            <a class="btn btn-secondary" href="#como-funciona">
+              Ver funciones
             </a>
           </div>
 
@@ -871,7 +1077,9 @@
       <div>© 2026 CustodiApp</div>
       <div class="footer-links">
         <a href="privacy.html">Política de privacidad</a>
-        <a href="calendario-custodia-compartida.html">Calendario de custodia compartida</a>
+        <a href="#como-funciona">Funciones</a>
+        <a href="#vacaciones">Vacaciones</a>
+        <a href="#cambios">Cambios</a>
         <a
           href="https://play.google.com/store/apps/details?id=com.custodiapp.app"
           target="_blank"
