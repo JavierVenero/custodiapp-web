@@ -16,9 +16,14 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta property="og:description" content="Menos cálculo mental, menos errores y más claridad. CustodiApp organiza tu custodia compartida de forma visual y rápida. Pago único de 2,99 €." />
+  <meta property="og:description" content="Semanas alternas, vacaciones, cambios y excepciones sin hacer cuentas de cabeza. Pago único de 2,99 €." />
   <meta property="og:url" content="https://custodiapp.es/" />
   <meta property="og:image" content="https://custodiapp.es/og.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
+  <meta name="twitter:description" content="CustodiApp organiza semanas alternas, vacaciones y cambios de forma visual. Pago único de 2,99 €." />
+  <meta name="twitter:image" content="https://custodiapp.es/og.png" />
 
   <style>
     :root {
@@ -236,7 +241,7 @@
       font-size: clamp(2rem, 4.2vw, 4rem);
       line-height: 1.02;
       letter-spacing: -0.04em;
-      max-width: 12ch;
+      max-width: 13ch;
     }
 
     .hero-lead {
@@ -334,13 +339,15 @@
 
     .feature-grid,
     .pain-grid,
+    .reviews-grid,
     .guides-grid {
       display: grid;
       gap: 16px;
     }
 
     .feature-grid,
-    .pain-grid {
+    .pain-grid,
+    .reviews-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -385,6 +392,19 @@
 
     .card li + li {
       margin-top: 8px;
+    }
+
+    .review-quote {
+      font-size: 1rem;
+      color: #f3f7ff;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .review-source {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
     }
 
     .guide-card {
@@ -492,6 +512,7 @@
 
       .feature-grid,
       .pain-grid,
+      .reviews-grid,
       .guides-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -624,6 +645,7 @@
 
       .feature-grid,
       .pain-grid,
+      .reviews-grid,
       .guides-grid {
         grid-template-columns: 1fr;
       }
@@ -641,7 +663,8 @@
 
       .card p,
       .guide-card span,
-      .card li {
+      .card li,
+      .review-quote {
         font-size: 0.95rem;
       }
 
@@ -715,6 +738,7 @@
 
       <nav class="top-nav" aria-label="Navegación principal">
         <a href="#funciones">Funciones</a>
+        <a href="#opiniones">Opiniones</a>
         <a href="#guias">Guías</a>
         <a href="#descargar">Descargar</a>
       </nav>
@@ -737,7 +761,7 @@
           <h1>Tu custodia compartida, clara y sin líos</h1>
 
           <p class="hero-lead">
-            CustodiApp te ayuda a organizar semanas alternas, vacaciones, cambios y excepciones de forma visual y rápida. Una app pensada para ver tu calendario con claridad y dejar de hacer cuentas de cabeza.
+            Semanas alternas, vacaciones, cambios y excepciones en un calendario visual que entiendes al momento. Sin hacer cuentas de cabeza, sin revisar mensajes antiguos y sin depender de un Excel para algo tan cotidiano.
           </p>
 
           <div class="hero-actions">
@@ -777,7 +801,7 @@
       <div class="container">
         <h2 class="section-title">Funciones clave</h2>
         <p class="section-lead">
-          Lo más útil de CustodiApp, sin adornos: ver tu organización de custodia con claridad y acceder rápido a la información que de verdad necesitas.
+          No es un calendario genérico. Está pensada específicamente para organizar custodias, vacaciones y excepciones sin perder el hilo ni tener que rehacerlo todo cada vez.
         </p>
 
         <div class="feature-grid">
@@ -833,6 +857,32 @@
           <div class="card">
             <h3>Más claridad</h3>
             <p>Todo queda más visual, más ordenado y más fácil de consultar en segundos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="opiniones">
+      <div class="container">
+        <h2 class="section-title">Lo que ya dicen quienes la usan</h2>
+        <p class="section-lead">
+          Opiniones reales publicadas en Google Play.
+        </p>
+
+        <div class="reviews-grid">
+          <div class="card">
+            <div class="review-quote">“Ideal. Me encanta. 100% recomendable.”</div>
+            <div class="review-source">— Cristina · reseña en Google Play</div>
+          </div>
+
+          <div class="card">
+            <div class="review-quote">“Muy práctica y fácil de usar. Recomendable y muy útil para gestionar calendario de custodia y necesidades similares.”</div>
+            <div class="review-source">— Reseña en Google Play</div>
+          </div>
+
+          <div class="card">
+            <div class="review-quote">“Herramienta muy práctica para gestionar custodias, vacaciones y organización con los niños. Muy recomendable y evita malentendidos.”</div>
+            <div class="review-source">— Reseña en Google Play</div>
           </div>
         </div>
       </div>
