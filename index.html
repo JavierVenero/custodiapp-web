@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CustodiApp | Custodia compartida clara, visual y sin líos</title>
-  <meta name="description" content="CustodiApp te ayuda a organizar la custodia compartida con claridad: semanas alternas, vacaciones, cambios y excepciones. Pago único de 2,99 €." />
+  <meta name="description" content="CustodiApp te ayuda a organizar la custodia compartida con claridad: semanas alternas, vacaciones, cambios y excepciones. Pago único sin cuotas ni mensualidades." />
   <meta name="keywords" content="custodia compartida, calendario custodia compartida, app custodia compartida, vacaciones custodia, calendario familiar" />
   <meta name="author" content="CustodiApp" />
   <meta name="theme-color" content="#0f172a" />
@@ -16,13 +16,13 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta property="og:description" content="Semanas alternas, vacaciones, cambios y excepciones sin hacer cuentas de cabeza. Pago único de 2,99 €." />
+  <meta property="og:description" content="Semanas alternas, vacaciones, cambios y excepciones sin hacer cuentas de cabeza. Pago único sin cuotas ni mensualidades." />
   <meta property="og:url" content="https://custodiapp.es/" />
   <meta property="og:image" content="https://custodiapp.es/og.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta name="twitter:description" content="CustodiApp organiza semanas alternas, vacaciones y cambios de forma visual. Pago único de 2,99 €." />
+  <meta name="twitter:description" content="CustodiApp organiza semanas alternas, vacaciones y cambios de forma visual. Pago único sin cuotas ni mensualidades." />
   <meta name="twitter:image" content="https://custodiapp.es/og.png" />
 
   <style>
@@ -172,6 +172,15 @@
       white-space: nowrap;
     }
 
+    .store-badge {
+      display: block;
+      transition: transform 0.15s ease;
+    }
+    
+    .store-badge:hover {
+      transform: scale(1.05);
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -187,17 +196,6 @@
       border: 0;
       text-align: center;
       white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #1f6bd0 100%);
-      color: #fff;
-      box-shadow: 0 16px 34px rgba(47, 128, 237, 0.22);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      background: linear-gradient(135deg, var(--primary-hover) 0%, #1b5cb1 100%);
     }
 
     .btn-secondary {
@@ -470,6 +468,7 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 14px;
+      align-items: center;
     }
 
     .footer {
@@ -714,14 +713,9 @@
       "@type": "MobileApplication",
       "name": "CustodiApp",
       "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "Android",
-      "offers": {
-        "@type": "Offer",
-        "price": "2.99",
-        "priceCurrency": "EUR"
-      },
+      "operatingSystem": "iOS, Android",
       "description": "App para organizar calendarios de custodia compartida: semanas alternas, vacaciones y cambios.",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.custodiapp.app"
+      "downloadUrl": "https://custodiapp.es/"
     }
   </script>
 </head>
@@ -744,9 +738,12 @@
       </nav>
 
       <div class="top-actions">
-        <div class="price-pill">Pago único · 2,99 €</div>
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
-          Descargar App
+        <div class="price-pill">Pago único · Sin cuotas</div>
+        <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 38px;">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 38px;">
         </a>
       </div>
     </div>
@@ -765,11 +762,11 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
-              Descargar app · 2,99 €
+            <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 48px;">
             </a>
-            <a class="btn btn-primary" href="https://apps.apple.com/app/id6478144582" target="_blank" rel="noopener noreferrer">
-              App Store
+            <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 48px;">
             </a>
             <a class="btn btn-secondary" href="#funciones">
               Ver funciones y guías
@@ -777,7 +774,7 @@
           </div>
 
           <div class="microproof">
-            <strong>Ya está en uso desde el lanzamiento.</strong> Las primeras compras llegaron el mismo día.
+            <strong>Disponible en Apple y en Android.</strong> Pago único sin cuotas ni mensualidades.
           </div>
         </div>
 
@@ -880,12 +877,12 @@
 
           <div class="card">
             <div class="review-quote">“Muy práctica y fácil de usar. Recomendable y muy útil para gestionar calendario de custodia y necesidades similares.”</div>
-            <div class="review-source">— Reseña en Google Play</div>
+            <div class="review-source">— Reseña de usuario</div>
           </div>
 
           <div class="card">
             <div class="review-quote">“Herramienta muy práctica para gestionar custodias, vacaciones y organización con los niños. Muy recomendable y evita malentendidos.”</div>
-            <div class="review-source">— Reseña en Google Play</div>
+            <div class="review-source">— Reseña de usuario</div>
           </div>
         </div>
       </div>
@@ -947,17 +944,17 @@
         <div class="cta-panel">
           <h2>Claridad para tu custodia compartida</h2>
           <p>
-            CustodiApp ya está disponible en Google Play por <strong>2,99 € de pago único</strong>. Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.
+            CustodiApp ya está disponible para Apple y Android. <strong>Pago único, sin cuotas ni mensualidades</strong>. Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
-              Descargar en Google Play
+            <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 52px;">
             </a>
-            <a class="btn btn-primary" href="https://apps.apple.com/app/id6478144582" target="_blank" rel="noopener noreferrer">
-              Descargar en App Store
+            <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 52px;">
             </a>
           </div>
-          <div class="microproof">Pago único · Sin mensualidades · Disponible para Android</div>
+          <div class="microproof">Pago único · Sin mensualidades · Disponible en Apple y Android</div>
         </div>
       </div>
     </section>
