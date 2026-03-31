@@ -172,15 +172,6 @@
       white-space: nowrap;
     }
 
-    .store-badge {
-      display: block;
-      transition: transform 0.15s ease;
-    }
-    
-    .store-badge:hover {
-      transform: scale(1.05);
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -196,6 +187,17 @@
       border: 0;
       text-align: center;
       white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #1f6bd0 100%);
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(47, 128, 237, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--primary-hover) 0%, #1b5cb1 100%);
     }
 
     .btn-secondary {
@@ -468,7 +470,6 @@
       gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 14px;
-      align-items: center;
     }
 
     .footer {
@@ -714,7 +715,7 @@
       "name": "CustodiApp",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "iOS, Android",
-      "description": "App para organizar calendarios de custodia compartida: semanas alternas, vacaciones y cambios.",
+      "description": "App para organizar calendarios de custodia compartida: semanas alternas, vacaciones y cambios. Pago único sin cuotas ni mensualidades.",
       "downloadUrl": "https://custodiapp.es/"
     }
   </script>
@@ -739,11 +740,8 @@
 
       <div class="top-actions">
         <div class="price-pill">Pago único · Sin cuotas</div>
-        <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 38px;">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 38px;">
+        <a class="btn btn-primary" href="#descargar">
+          Descargar
         </a>
       </div>
     </div>
@@ -762,11 +760,11 @@
           </p>
 
           <div class="hero-actions">
-            <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 48px;">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/id6478144582" target="_blank" rel="noopener noreferrer">
+              Descargar en Apple
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 48px;">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
+              Descargar en Android
             </a>
             <a class="btn btn-secondary" href="#funciones">
               Ver funciones y guías
@@ -947,11 +945,11 @@
             CustodiApp ya está disponible para Apple y Android. <strong>Pago único, sin cuotas ni mensualidades</strong>. Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.
           </p>
           <div class="cta-row">
-            <a href="https://apps.apple.com/app/id6478144582" class="store-badge" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Descargar en App Store" style="height: 52px;">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/id6478144582" target="_blank" rel="noopener noreferrer">
+              Descargar en Apple
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.custodiapp.app" class="store-badge" target="_blank" rel="noopener noreferrer">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Descargar en Google Play" style="height: 52px;">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
+              Descargar en Android
             </a>
           </div>
           <div class="microproof">Pago único · Sin mensualidades · Disponible en Apple y Android</div>
