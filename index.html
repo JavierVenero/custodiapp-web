@@ -252,11 +252,11 @@
       display: grid;
       grid-template-columns: 1.02fr 0.98fr;
       gap: 28px;
-      align-items: start; /* CORRECCIÓN: ancla el contenido arriba */
+      align-items: start;
     }
 
     .hero-text {
-      padding-top: 40px; /* CORRECCIÓN: baja el texto para alinearlo con el móvil */
+      padding-top: 40px;
     }
 
     .eyebrow {
@@ -314,45 +314,24 @@
       min-width: 0;
     }
 
-    .screen-main {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: #0c1526;
-      margin-bottom: 12px;
-    }
-
-    .screen-main img {
-      width: 100%;
-      height: auto;
-    }
-
-    .screen-thumbs {
+    .hero-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 14px;
     }
 
-    .screen-thumbs button {
-      border: 1px solid rgba(255,255,255,0.09);
-      background: rgba(255,255,255,0.04);
-      border-radius: 14px;
-      padding: 8px;
-      cursor: pointer;
-      transition: 0.15s ease;
-      min-width: 0;
-    }
-
-    .screen-thumbs button:hover,
-    .screen-thumbs button.active {
-      border-color: rgba(47, 128, 237, 0.60);
-      background: rgba(47, 128, 237, 0.09);
-    }
-
-    .screen-thumbs img {
-      border-radius: 10px;
+    .hero-gallery img {
       width: 100%;
       height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: 0.2s ease;
+    }
+
+    .hero-gallery img:hover {
+      transform: translateY(-3px);
+      border-color: rgba(47, 128, 237, 0.60);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     }
 
     .section {
@@ -552,7 +531,7 @@
       .top-actions .btn { min-height: 42px; padding: 0 16px; font-size: 0.9rem; border-radius: 12px; }
       
       .hero { padding: 22px 0 18px; }
-      .hero-text { padding-top: 0; } /* CORRECCIÓN: en móvil reseteamos el padding */
+      .hero-text { padding-top: 0; }
       .eyebrow { margin-bottom: 14px; padding: 8px 12px; font-size: 0.78rem; line-height: 1.2; }
       h1 { font-size: 2.2rem; max-width: none; margin-bottom: 12px; }
       .hero-lead { font-size: 1.05rem; margin-bottom: 20px; }
@@ -563,9 +542,8 @@
       
       .microproof { font-size: 0.92rem; margin-top: 18px; }
       .hero-card { padding: 10px; border-radius: 20px; }
-      .screen-main { border-radius: 14px; margin-bottom: 10px; }
-      .screen-thumbs { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .screen-thumbs button { padding: 6px; border-radius: 12px; }
+      .hero-gallery { gap: 8px; }
+      .hero-gallery img { border-radius: 10px; }
       .section { padding: 22px 0; }
       .section-title { font-size: 1.85rem; margin-bottom: 8px; }
       .section-lead { font-size: 0.98rem; margin-bottom: 18px; }
@@ -642,19 +620,10 @@
         </div>
 
         <div class="hero-card" aria-label="Vista previa de la app">
-          <div class="screen-main">
-            <img id="mainScreen" src="screen-1.png" alt="Pantallazo principal de CustodiApp con calendario anual" />
-          </div>
-          <div class="screen-thumbs">
-            <button class="active" type="button" data-screen="screen-1.png" data-alt="Vista anual del calendario de custodia compartida">
-              <img src="screen-1.png" alt="Miniatura de vista anual" />
-            </button>
-            <button type="button" data-screen="screen-2.png" data-alt="Pantalla de reglas de convenio y vacaciones">
-              <img src="screen-2.png" alt="Miniatura de reglas de convenio" />
-            </button>
-            <button type="button" data-screen="screen-3.png" data-alt="Pantalla de patrón de 14 días y ajustes">
-              <img src="screen-3.png" alt="Miniatura de patrón de 14 días" />
-            </button>
+          <div class="hero-gallery">
+            <img src="screen-1.png" alt="Vista anual del calendario de custodia compartida" />
+            <img src="screen-2.png" alt="Pantalla de reglas de convenio y vacaciones" />
+            <img src="screen-3.png" alt="Pantalla de patrón de 14 días y ajustes" />
           </div>
         </div>
       </div>
@@ -844,18 +813,6 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    const mainScreen = document.getElementById("mainScreen");
-    const thumbButtons = document.querySelectorAll(".screen-thumbs button");
-
-    thumbButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        thumbButtons.forEach((b) => b.classList.remove("active"));
-        button.classList.add("active");
-        mainScreen.src = button.dataset.screen;
-        mainScreen.alt = button.dataset.alt;
-      });
-    });
   </script>
 </body>
 </html>
