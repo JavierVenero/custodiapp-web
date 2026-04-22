@@ -1,69 +1,151 @@
+<!doctype html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>CustodiApp | Custodia compartida clara, visual y sin líos</title>
-  <meta name="description" content="CustodiApp te ayuda a organizar la custodia compartida con claridad: semanas alternas, vacaciones, cambios y excepciones. Pago único sin cuotas ni mensualidades." />
-  <meta name="keywords" content="custodia compartida, calendario custodia compartida, app custodia compartida, vacaciones custodia, calendario familiar" />
+  <title>CustodiApp | Calendario de custodia compartida con convenio integrado</title>
+  <meta name="description" content="CustodiApp organiza tu custodia compartida con calendario visual, vacaciones, excepciones, convenio regulador con búsqueda rápida y etiquetas personalizables. Pago único, sin cuotas." />
+  <meta name="keywords" content="custodia compartida, calendario custodia compartida, app custodia compartida, convenio regulador, vacaciones custodia, calendario familiar, app padres separados" />
   <meta name="author" content="CustodiApp" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#07111f" />
 
+<title>CustodiApp — Calendario de custodia compartida</title>
+<meta name="description" content="CustodiApp es la herramienta visual más rápida y sencilla para organizar turnos, visitas y vacaciones en custodias compartidas. Pago único, sin cuentas, sin nube.">
+  <meta name="description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
+  <meta name="keywords" content="custodia compartida, calendario de custodia, app custodia, con o sin niños, organización familiar, turnos, padres separados, planificación de custodia">
+  <!-- OPEN GRAPH (WhatsApp / Facebook / LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CustodiApp" />
+<meta property="og:title" content="CustodiApp | Custodia compartida, sin líos" />
+<meta property="og:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
+<meta property="og:url" content="https://custodiapp.es/" />
+<meta property="og:image" content="https://custodiapp.es/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
   <link rel="canonical" href="https://custodiapp.es/" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 
+<!-- TWITTER / X (también lo usan algunos previews) -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CustodiApp | Custodia compartida, sin líos" />
+<meta name="twitter:description" content="Organiza tu custodia compartida en 1 minuto. Pago único 2,99€. Sin cuotas. Sin cuentas. Sin nube. Uso personal." />
+<meta name="twitter:image" content="https://custodiapp.es/og.png" />  <meta name="theme-color" content="#0b1020" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta property="og:description" content="Semanas alternas, vacaciones, cambios y excepciones sin hacer cuentas de cabeza. Pago único sin cuotas ni mensualidades." />
+  <meta property="og:site_name" content="CustodiApp" />
+  <meta property="og:title" content="CustodiApp | Custodia compartida clara, visual y completa" />
+  <meta property="og:description" content="Calendario visual, vacaciones, excepciones, convenio regulador consultable y etiquetas personalizables. Pago único, sin cuotas." />
   <meta property="og:url" content="https://custodiapp.es/" />
   <meta property="og:image" content="https://custodiapp.es/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CustodiApp | Custodia compartida clara, visual y sin líos" />
-  <meta name="twitter:description" content="CustodiApp organiza semanas alternas, vacaciones y cambios de forma visual. Pago único sin cuotas ni mensualidades." />
+  <meta name="twitter:title" content="CustodiApp | Custodia compartida clara, visual y completa" />
+  <meta name="twitter:description" content="Organiza calendario, vacaciones, excepciones y convenio regulador en una sola app. Pago único, sin cuotas." />
   <meta name="twitter:image" content="https://custodiapp.es/og.png" />
 
   <style>
+    :root{
+      --bg:#0b1020;
+      --card:rgba(255,255,255,.07);
+      --card2:rgba(255,255,255,.10);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.58);
+      --stroke:rgba(255,255,255,.12);
+      --shadow: 0 20px 50px rgba(0,0,0,.30);
+      --radius:18px;
+      --radius2:22px;
+      --max: 1020px;
+      --blue:#2d408f;
+      --green:#76b852;
+      --grad: linear-gradient(135deg, var(--blue) 0%, #12c2c8 45%, var(--green) 100%);
+      --grad2: radial-gradient(1200px 700px at 20% 10%, rgba(47,123,255,.35), transparent 55%),
+               radial-gradient(1000px 700px at 80% 20%, rgba(18,194,200,.28), transparent 55%),
+               radial-gradient(900px 700px at 80% 90%, rgba(118,184,82,.22), transparent 55%);
+      --font: -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;
     :root {
       --bg: #07111f;
-      --bg-2: #0b1628;
+      --bg-soft: #0b1628;
+      --bg-deep: #050b15;
       --panel: rgba(255, 255, 255, 0.07);
-      --panel-strong: rgba(255, 255, 255, 0.10);
+      --panel-strong: rgba(255, 255, 255, 0.11);
+      --panel-bright: rgba(255, 255, 255, 0.16);
       --text: #eef4ff;
-      --muted: #b8c7dd;
-      --line: rgba(255, 255, 255, 0.12);
-      --primary: #2f80ed;
-      --primary-hover: #2369c4;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --muted: #b7c7dd;
+      --muted-2: #8292aa;
+      --line: rgba(255, 255, 255, 0.13);
+      --blue: #2d408f;
+      --cyan: #12c2c8;
+      --green: #76b852;
+      --orange: #ff9800;
+      --danger: #ff5a6a;
+      --grad: linear-gradient(135deg, #2d408f 0%, #12c2c8 45%, #76b852 100%);
+      --grad-soft: linear-gradient(135deg, rgba(45, 64, 143, 0.24), rgba(18, 194, 200, 0.18), rgba(118, 184, 82, 0.18));
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.22);
       --max: 1180px;
-      --header-offset: 92px;
-      --radius-xl: 28px;
-      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --radius-lg: 24px;
       --radius-md: 18px;
       --radius-sm: 14px;
+      --header-offset: 92px;
     }
 
+    *{box-sizing:border-box}
     * {
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
 
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background: var(--bg);
+      background-image: var(--grad2);
     html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(47, 128, 237, 0.16), transparent 35%),
-        radial-gradient(circle at top right, rgba(39, 174, 96, 0.10), transparent 28%),
-        linear-gradient(180deg, #07111f 0%, #0a1424 100%);
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(18, 194, 200, 0.18), transparent 32%),
+        radial-gradient(circle at 92% 10%, rgba(118, 184, 82, 0.16), transparent 28%),
+        radial-gradient(circle at 48% 52%, rgba(45, 64, 143, 0.24), transparent 42%),
+        linear-gradient(180deg, #07111f 0%, #091423 50%, #050b15 100%);
       line-height: 1.5;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.65), transparent 78%);
+      opacity: 0.42;
     }
 
     a {
@@ -77,186 +159,202 @@
     }
 
     .container {
-      width: min(var(--max), calc(100% - 32px));
+      width: min(var(--max), calc(100% - 36px));
       margin: 0 auto;
     }
 
+    a{color:inherit}
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(7, 17, 31, 0.82);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 17, 31, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:34px 18px 70px
     .topbar-inner {
+      min-height: 78px;
+      padding: 10px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      min-height: 78px;
-      padding: 10px 0;
+      gap: 18px;
     }
 
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 2px 22px;
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
       min-width: 0;
-      flex-shrink: 1;
     }
 
-    .brand img {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      border-radius: 12px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:24px;
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      padding: 4px;
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.26);
       flex-shrink: 0;
     }
 
-    .brand-text {
-      min-width: 0;
+    .logo{
+      width:120px;
+      height:120px;
+      display:grid;
+      place-items:center;
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .brand-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
+      font-size: 1.18rem;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.03em;
     }
 
     .brand-subtitle {
-      font-size: 0.86rem;
+      margin-top: 3px;
       color: var(--muted);
-      line-height: 1.2;
+      font-size: 0.86rem;
+      line-height: 1.15;
     }
 
     .top-actions {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 10px;
       flex-wrap: wrap;
-      justify-content: flex-end;
       flex-shrink: 0;
     }
 
+    .nav-link {
+      color: var(--muted);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 10px 8px;
+      transition: color 0.18s ease;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+    }
+
     .btn {
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: var(--radius-sm);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 50px;
-      padding: 0 20px;
-      border-radius: var(--radius-sm);
-      font-weight: 800;
-      font-size: 1rem;
-      transition: 0.18s ease;
-      cursor: pointer;
       border: 0;
+      cursor: pointer;
+      font-weight: 900;
       text-align: center;
       white-space: nowrap;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #1f6bd0 100%);
+      background: var(--grad);
       color: #fff;
-      box-shadow: 0 16px 34px rgba(47, 128, 237, 0.22);
+      box-shadow: 0 18px 42px rgba(18, 194, 200, 0.2);
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
-      background: linear-gradient(135deg, var(--primary-hover) 0%, #1b5cb1 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 22px 52px rgba(18, 194, 200, 0.28);
+    }
+
+    .store-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .store-btn {
+      height: 50px;
+      min-width: 172px;
+      padding: 6px 14px;
+      border-radius: 11px;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: #050505;
+      color: #fff;
       display: inline-flex;
       align-items: center;
-      background: #000;
-      color: #fff;
-      border: 1px solid #a6a6a6;
-      border-radius: 8px;
-      padding: 5px 14px;
-      text-decoration: none;
-      height: 48px;
-      transition: transform 0.2s ease;
-      box-sizing: border-box;
+      gap: 10px;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.24);
     }
-    
+
     .store-btn:hover {
-      transform: scale(1.04);
-      border-color: #fff;
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.7);
     }
-    
+
     .store-btn svg {
+      width: 26px;
       height: 26px;
-      width: auto;
-      margin-right: 10px;
       fill: #fff;
+      flex-shrink: 0;
     }
-    
-    .store-btn .text-col {
+
+    .store-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: flex-start;
       text-align: left;
-    }
-    
-    .store-btn .text-top {
-      font-size: 0.65rem;
-      line-height: 1.1;
-      margin-bottom: 2px;
-    }
-    
-    .store-btn .text-bottom {
-      font-size: 1.1rem;
-      font-weight: 600;
       line-height: 1;
+    }
+
+    .store-text span:first-child {
+      font-size: 0.62rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 3px;
+      opacity: 0.86;
+    }
+
+    .store-text span:last-child {
+      font-size: 1.08rem;
+      font-weight: 800;
       letter-spacing: -0.02em;
     }
 
-    /* MENÚ VISUAL DESTACADO */
-    .highlight-menu {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-    
-    .highlight-pill {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 99px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    .highlight-pill:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: var(--primary);
-      transform: translateY(-2px);
-    }
-
     .hero {
-      padding: 42px 0 24px;
+      padding: 54px 0 38px;
+      position: relative;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 28px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+      align-items: center;
+      gap: 34px;
     }
 
-    .hero-text {
-      padding-top: 40px;
+    .hero-copy {
+      min-width: 0;
     }
 
     .eyebrow {
@@ -264,228 +362,775 @@
       align-items: center;
       gap: 8px;
       padding: 9px 14px;
+      margin-bottom: 20px;
       border-radius: 999px;
-      background: rgba(39, 174, 96, 0.10);
-      color: #d7f6e2;
-      border: 1px solid rgba(39, 174, 96, 0.18);
+      color: #dff8e7;
+      background: rgba(118, 184, 82, 0.12);
+      border: 1px solid rgba(118, 184, 82, 0.24);
       font-size: 0.92rem;
-      font-weight: 700;
-      margin-bottom: 18px;
+      font-weight: 850;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 6px rgba(118, 184, 82, 0.13);
+      flex-shrink: 0;
     }
 
     h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      max-width: 600px;
+      margin: 0 0 18px;
+      max-width: 760px;
+      font-size: clamp(2.65rem, 6vw, 5.45rem);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+    }
+
+    .gradient-word {
+      background: linear-gradient(135deg, #ffffff 0%, #bff7ff 35%, #dbf8cd 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero-lead {
-      margin: 0 0 28px;
-      font-size: 1.15rem;
+      margin: 0 0 26px;
+      max-width: 690px;
       color: var(--muted);
-      max-width: 620px;
+      font-size: clamp(1.08rem, 1.55vw, 1.28rem);
     }
 
-    .hero-actions {
+    .hero-proof {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 10px;
+      margin: 24px 0 0;
+    }
+
+    .proof-pill {
+      display: inline-flex;
       align-items: center;
-      margin-bottom: 24px;
+      gap: 8px;
+      padding: 10px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: #f7fbff;
+      font-size: 0.9rem;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
-    .microproof {
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    .proof-pill span {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--cyan);
+      flex-shrink: 0;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:32px;
+      letter-spacing:.2px;
+      font-weight:800;
+    .hero-visual {
+      min-width: 0;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .brand small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted2);
+      font-size:15px;
+    .orbit-card {
+      position: absolute;
+      z-index: 1;
+      padding: 13px 15px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.09);
+      backdrop-filter: blur(14px);
+      box-shadow: var(--shadow-soft);
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.88rem;
+    }
+
+    .pillbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    .orbit-card small {
+      display: block;
+      margin-top: 3px;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-weight: 750;
+      font-size: 0.74rem;
     }
 
-    .microproof strong {
-      color: #ffffff;
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.05);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+      backdrop-filter: blur(10px);
+    .orbit-one {
+      top: 28px;
+      left: 8px;
     }
 
-    .hero-card {
-      padding: 16px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.04) 100%);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: var(--radius-xl);
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:99px;
+      background:var(--grad);
+      display:inline-block;
+    .orbit-two {
+      right: 0;
+      bottom: 82px;
+    }
+
+    .hero{
+      margin-top:8px;
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius: var(--radius2);
+    .phone-shell {
+      width: min(365px, 82vw);
+      padding: 13px;
+      border-radius: 48px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.34), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.22);
       box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      position: relative;
+      z-index: 2;
+    }
+
+    .phone {
+      min-height: 640px;
+      border-radius: 38px;
+      overflow: hidden;
+      background: #f7f9fb;
+      color: #24335c;
+      border: 8px solid #07090d;
+      position: relative;
+    }
+
+    .notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 118px;
+      height: 31px;
+      border-radius: 999px;
+      background: #050505;
+      z-index: 5;
+    }
+
+    .phone-header {
+      padding: 50px 18px 15px;
+      background: linear-gradient(180deg, rgba(45,64,143,0.08), rgba(255,255,255,1));
+      border-bottom: 1px solid #edf0f4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .phone-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       min-width: 0;
     }
 
-    .hero-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+    .mini-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      padding: 3px;
+      flex-shrink: 0;
     }
 
-    .hero-gallery img {
+    .mini-logo img {
       width: 100%;
-      height: auto;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      transition: 0.2s ease;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .hero-gallery img:hover {
-      transform: translateY(-3px);
-      border-color: rgba(47, 128, 237, 0.60);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    .phone-title {
+      font-size: 1.1rem;
+      font-weight: 950;
+      color: var(--blue);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .phone-subtitle {
+      margin-top: 3px;
+      font-size: 0.62rem;
+      color: #93a0b3;
+      font-weight: 800;
+    }
+
+    .phone-action {
+      color: var(--blue);
+      font-size: 0.66rem;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .phone-tabs {
+      padding: 11px 14px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.8fr 0.86fr 0.86fr 0.6fr;
+      gap: 5px;
+      background: #fff;
+    }
+
+    .phone-tab {
+      min-width: 0;
+      height: 28px;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      background: #f2f4f8;
+      color: var(--blue);
+      font-size: 0.58rem;
+      font-weight: 950;
+    }
+
+    .phone-tab.active {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .phone-body {
+      padding: 18px 16px 18px;
+    }
+
+    .month-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--blue);
+      font-weight: 950;
+      margin-bottom: 16px;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .dow {
+      text-align: center;
+      color: #a5adba;
+      font-size: 0.62rem;
+      font-weight: 950;
+      padding-bottom: 2px;
+    }
+
+    .day {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 950;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.06);
+    }
+
+    .day.con {
+      background: var(--green);
+    }
+
+    .day.sin {
+      background: var(--orange);
+    }
+
+    .day.soft {
+      opacity: 0.28;
+    }
+
+    .label-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .label-card {
+      min-height: 46px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 950;
+      line-height: 1.05;
+      text-align: center;
+    }
+
+    .label-card.con {
+      background: var(--green);
+    }
+
+    .label-card.sin {
+      background: var(--orange);
+    }
+
+    .search-card {
+      margin-top: 12px;
+      padding: 13px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 10px 26px rgba(45,64,143,0.08);
+      border: 1px solid #eef1f6;
+    }
+
+    .search-title {
+      color: var(--blue);
+      font-size: 0.76rem;
+      font-weight: 950;
+      margin-bottom: 8px;
+    }
+
+    .search-box {
+      height: 34px;
+      border-radius: 10px;
+      background: #f3f6fa;
+      color: #6b7587;
+      display: flex;
+      align-items: center;
+      padding: 0 11px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .result-row {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .result-chip {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(45,64,143,0.08);
+      color: var(--blue);
+      font-size: 0.62rem;
+      font-weight: 900;
     }
 
     .section {
-      padding: 30px 0;
+      padding: 42px 0;
       scroll-margin-top: var(--header-offset);
     }
 
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+      color: #d4f8df;
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     .section-title {
-      margin: 0 0 10px;
-      font-size: clamp(1.7rem, 3vw, 2.5rem);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3.4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
     }
 
     .section-lead {
-      margin: 0 0 24px;
+      margin: 0;
       color: var(--muted);
-      max-width: 760px;
-      font-size: 1.02rem;
+      font-size: 1.06rem;
     }
 
-    .feature-grid,
-    .pain-grid,
-    .reviews-grid,
-    .guides-grid {
+    .feature-grid {
       display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
     }
 
-    .feature-grid,
-    .pain-grid,
-    .reviews-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .guides-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     .card {
-      display: block;
+      min-width: 0;
       padding: 20px;
       border-radius: var(--radius-lg);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.055);
       border: 1px solid var(--line);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.12);
-      transition: 0.18s ease;
-      min-width: 0;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
     }
 
     .card:hover {
-      transform: translateY(-1px);
-      border-color: rgba(47, 128, 237, 0.45);
-      background: rgba(255,255,255,0.07);
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.075);
+      border-color: rgba(18,194,200,0.38);
+    }
+
+    .icon-bubble {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      background: var(--grad-soft);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .icon-bubble::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 5px;
+      background: var(--grad);
+      box-shadow: 0 0 22px rgba(18,194,200,0.4);
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.12rem;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
+      margin: 0 0 9px;
+      font-size: 1.08rem;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
     }
 
     .card p {
       margin: 0;
       color: var(--muted);
+      font-size: 0.96rem;
     }
 
-    .card ul {
-      margin: 14px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 20px;
+      align-items: stretch;
     }
 
-    .card li + li {
-      margin-top: 8px;
-    }
-
-    .review-quote {
-      font-size: 1rem;
-      color: #f3f7ff;
-      line-height: 1.5;
-      margin-bottom: 14px;
-    }
-
-    .review-source {
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .guide-card {
-      display: block;
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--line);
-      transition: 0.18s ease;
+    .hero-inner{
+      padding:36px 22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:center;
+    .panel {
+      padding: 24px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow-soft);
       min-width: 0;
     }
 
-    .guide-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(47, 128, 237, 0.45);
-      background: rgba(255,255,255,0.08);
+    h2{
+      margin:14px 0 10px;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:-.6px;
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .guide-card strong {
-      display: block;
-      font-size: 1.05rem;
-      color: #fff;
-      margin-bottom: 6px;
-      line-height: 1.25;
-    }
-
-    .guide-card span {
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.55;
+      max-width:56ch;
+    .check-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
       color: var(--muted);
-      font-size: 0.95rem;
+      align-items: start;
+    }
+
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:12px;
+    .check-list li::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(118,184,82,0.16);
+      border: 1px solid rgba(118,184,82,0.28);
+      position: relative;
+      margin-top: 1px;
+    }
+
+    .btn{
+      border:0;
+      cursor:pointer;
+      padding:14px 18px;
+      border-radius:16px;
+      font-weight:700;
+      font-size:15px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      transition: transform .08s ease;
+    .search-demo {
+      background: #f7f9fb;
+      color: #26385f;
+      border-radius: 28px;
+      padding: 18px;
+      min-height: 100%;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8);
+    }
+
+    .pdf-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .btn:active{transform:scale(.98)}
+    .pdf-title {
+      color: var(--blue);
+      font-weight: 950;
+      letter-spacing: -0.03em;
+    }
+
+    .btn-primary{
+    .pdf-pill {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(45,64,143,0.08);
+      color: var(--blue);
+      font-size: 0.74rem;
+      font-weight: 900;
+    }
+
+    .pdf-search {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      border-radius: 13px;
+      background: #fff;
+      border: 1px solid #e6ebf2;
+      color: #596579;
+      font-weight: 850;
+      margin-bottom: 14px;
+    }
+
+    .pdf-result {
+      padding: 13px;
+      border-radius: 15px;
+      background: #fff;
+      border: 1px solid #edf1f6;
+      color: #5b6679;
+      font-size: 0.88rem;
       line-height: 1.45;
+    }
+
+    .pdf-result strong {
+      color: var(--blue);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      position: relative;
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--line);
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: var(--grad);
+      color:#0b1020;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      min-width:250px;
+      font-weight: 950;
+      margin-bottom: 16px;
+    }
+
+    .btn-ghost{
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      border:1px solid var(--stroke);
+    .step h3 {
+      margin: 0 0 8px;
+      letter-spacing: -0.025em;
+    }
+
+    .fine{
+      margin-top:10px;
+      color:var(--muted2);
+      font-size:12.5px;
+      line-height:1.45;
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .side{
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.05);
+      border-radius:var(--radius);
+      padding:18px;
+      backdrop-filter: blur(10px);
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+      font-size:13.5px;
+      color:var(--muted);
+    .quote {
+      color: #f7fbff;
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+    }
+
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:12px;
+    .source {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 850;
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .guide {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.045);
+      color: var(--muted);
+      font-weight: 800;
+      transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .guide strong {
       display: block;
+      color: #fff;
+      margin-bottom: 5px;
+      line-height: 1.2;
+    }
+
+    .guide:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.075);
+      color: #fff;
     }
 
     .final-cta {
-      padding: 32px 0 56px;
+      padding: 42px 0 62px;
     }
 
     .cta-panel {
-      padding: 30px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.05) 100%);
-      border: 1px solid rgba(255,255,255,0.11);
-      box-shadow: var(--shadow);
+      padding: clamp(26px, 5vw, 48px);
+      border-radius: 36px;
       text-align: center;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(18,194,200,0.24), transparent 34%),
+        radial-gradient(circle at 80% 30%, rgba(118,184,82,0.20), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.055));
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: var(--shadow);
     }
 
     .cta-panel h2 {
       margin: 0 0 12px;
-      font-size: clamp(1.8rem, 3.2vw, 2.9rem);
-      line-height: 1.08;
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
     }
 
+    .card{
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.05);
+      border-radius:var(--radius);
+      padding:16px;
+      backdrop-filter: blur(10px);
     .cta-panel p {
-      margin: 0 auto 22px;
-      max-width: 760px;
+      margin: 0 auto 24px;
+      max-width: 820px;
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: 1.08rem;
     }
 
-    .cta-row {
-      display: flex;
+    .cta-panel .store-row {
       justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
     }
 
     .footer {
@@ -493,140 +1138,368 @@
     }
 
     .footer-inner {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
       display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 16px;
-      align-items: center;
       flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.94rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 20px;
+      color: var(--muted-2);
+      font-size: 0.92rem;
     }
 
+    .card b{
+      display:block;
+      margin-bottom:6px;
+      font-size:14px;
     .footer-links {
       display: flex;
-      gap: 16px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.45;
     .footer a:hover {
       color: #fff;
     }
 
-    /* ESTILOS PARA VERSIÓN MÓVIL */
-    @media (max-width: 700px) {
-      :root {
-        --header-offset: 70px;
+    .footer{
+      margin-top:26px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:var(--muted2);
+      font-size:12.5px;
+    @media (max-width: 1020px) {
+      .feature-grid,
+      .guides-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-      .container { width: min(var(--max), calc(100% - 20px)); }
-      .topbar-inner { min-height: 60px; padding: 10px 0; align-items: center; gap: 8px; justify-content: space-between; }
-      
-      .brand { gap: 8px; min-width: 0; flex: 1 1 auto; }
-      .brand img { width: 38px; height: 38px; border-radius: 10px; }
-      .brand-title { font-size: 1.1rem; }
-      .brand-subtitle { display: none; }
-      
-      .top-actions { gap: 6px; flex-shrink: 0; }
-      .top-actions .btn { min-height: 42px; padding: 0 16px; font-size: 0.9rem; border-radius: 12px; }
-      
-      /* CORRECCIÓN VITAL: Romper las dos columnas en móviles */
-      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
 
-      .hero { padding: 22px 0 18px; }
-      .hero-text { padding-top: 0; }
-      .eyebrow { margin-bottom: 14px; padding: 8px 12px; font-size: 0.78rem; line-height: 1.2; }
-      h1 { font-size: 2.2rem; max-width: none; margin-bottom: 12px; }
-      .hero-lead { font-size: 1.05rem; margin-bottom: 20px; }
-      .hero-actions { gap: 10px; margin-bottom: 16px; justify-content: flex-start; }
-      
-      .highlight-menu { margin-bottom: 18px; gap: 8px; }
-      .highlight-pill { padding: 8px 14px; font-size: 0.85rem; }
-      
-      .microproof { font-size: 0.92rem; margin-top: 18px; }
-      .hero-card { padding: 10px; border-radius: 20px; }
-      .hero-gallery { gap: 8px; }
-      .hero-gallery img { border-radius: 10px; }
-      .section { padding: 22px 0; }
-      .section-title { font-size: 1.85rem; margin-bottom: 8px; }
-      .section-lead { font-size: 0.98rem; margin-bottom: 18px; }
-      .feature-grid, .pain-grid, .reviews-grid, .guides-grid { grid-template-columns: 1fr; }
-      .card, .guide-card { padding: 16px; border-radius: 18px; }
-      .card h3, .guide-card strong { font-size: 1.02rem; }
-      .card p, .guide-card span, .card li, .review-quote { font-size: 0.95rem; }
-      .final-cta { padding: 24px 0 40px; }
-      .cta-panel { padding: 22px 16px; border-radius: 20px; }
-      .cta-panel h2 { font-size: 2rem; }
-      .cta-panel p { font-size: 0.98rem; }
-      .footer { padding-bottom: 22px; }
-      .footer-inner { font-size: 0.9rem; gap: 10px; }
+      .hero-grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .phone-shell {
+        width: min(340px, 88vw);
+      }
+    }
+
+    @media (max-width:860px){
+      .top{flex-direction:column;text-align:center}
+      .brand{flex-direction:column}
+      .hero-inner{grid-template-columns:1fr;padding:24px 16px}
+      h2{font-size:36px}
+      .btn-primary{width:100%}
+      .grid{grid-template-columns:1fr}
+    @media (max-width: 720px) {
+      :root {
+        --header-offset: 72px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 22px));
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+      }
+
+      .brand-title {
+        font-size: 1.08rem;
+      }
+
+      .brand-subtitle,
+      .nav-link {
+        display: none;
+      }
+
+      .top-actions .btn {
+        min-height: 42px;
+        padding: 0 13px;
+        font-size: 0.88rem;
+      }
+
+      .hero {
+        padding: 28px 0 22px;
+      }
+
+      .hero-grid {
+        gap: 24px;
+      }
+
+      .hero-visual {
+        order: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.45rem, 14vw, 3.25rem);
+      }
+
+      .hero-lead {
+        font-size: 1.02rem;
+      }
+
+      .store-row {
+        width: 100%;
+      }
+
+      .store-btn {
+        flex: 1 1 160px;
+        min-width: 0;
+      }
+
+      .proof-pill {
+        font-size: 0.82rem;
+        padding: 9px 11px;
+      }
+
+      .orbit-card {
+        display: none;
+      }
+
+      .phone-shell {
+        width: min(318px, 94vw);
+        padding: 10px;
+        border-radius: 40px;
+      }
+
+      .phone {
+        min-height: 566px;
+        border-radius: 32px;
+        border-width: 7px;
+      }
+
+      .phone-header {
+        padding: 46px 14px 12px;
+      }
+
+      .phone-body {
+        padding: 14px 12px;
+      }
+
+      .calendar-grid {
+        gap: 5px;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+
+      .feature-grid,
+      .steps,
+      .review-grid,
+      .guides-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel,
+      .card,
+      .step {
+        padding: 18px;
+      }
+
+      .section-title {
+        font-size: 2.08rem;
+      }
+
+      .cta-panel {
+        border-radius: 26px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CustodiApp",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "Calendario visual de custodia compartida con vacaciones, excepciones, convenio regulador consultable y etiquetas personalizables.",
+      "offers": {
+        "@type": "Offer",
+        "price": "2.99",
+        "priceCurrency": "EUR"
+      }
+    }
+  </script>
+</head>
 <body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="logo">
+          <img src="logo_transparente.png" alt="CustodiApp Logo">
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#inicio" aria-label="Ir al inicio de CustodiApp">
-        <img src="logo_transparente.png" alt="Logo de CustodiApp" />
-        <div class="brand-text">
-          <div class="brand-title">CustodiApp</div>
-          <div class="brand-subtitle">Custodia compartida clara, visual y rápida</div>
+        <div class="brand-logo">
+          <img src="logo_transparente.png" alt="Logo de CustodiApp" />
         </div>
+        <div>
+          <h1>CustodiApp</h1>
+          <small>Custodia compartida, sin cálculos mentales.</small>
+          <div class="brand-title">CustodiApp</div>
+          <div class="brand-subtitle">Calendario de custodia compartida</div>
+        </div>
+      </div>
       </a>
 
-      <div class="top-actions">
-        <a class="btn btn-primary" href="#descargar">
-          Descargar App
-        </a>
+      <div class="pillbar">
+        <div class="pill"><span class="dot"></span>Pago único <b>2,99€</b></div>
+        <div class="pill"><span class="dot"></span>Uso personal</div>
+        <div class="pill"><span class="dot"></span>Sin cuentas · Sin nube</div>
       </div>
+      <nav class="top-actions" aria-label="Navegación principal">
+        <a class="nav-link" href="#funciones">Funciones</a>
+        <a class="nav-link" href="#convenio">Convenio</a>
+        <a class="nav-link" href="#guias">Guías</a>
+        <a class="btn btn-primary" href="#descargar">Descargar</a>
+      </nav>
     </div>
   </header>
 
   <main id="inicio">
     <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker">✅ <b>Organiza tu año en 1 minuto</b> · Visual · Rápida</div>
+          <h2>Tu custodia, ordenada. Sin estrés.</h2>
+          <p class="sub">
+            CustodiApp te permite planificar turnos, régimen de visitas y vacaciones de forma visual.
+            <b>Herramienta de uso personal</b>: no necesitas agendas compartidas ni sincronizaciones complejas.
       <div class="container hero-grid">
-        <div class="hero-text">
-          <div class="eyebrow">Menos cálculo mental. Menos líos. Más claridad.</div>
-
-          <h1>Tu custodia compartida, clara y sin líos</h1>
-
+        <div class="hero-copy">
+          <div class="eyebrow">Pago único · Sin cuotas · iPhone y Android</div>
+          <h1>Organiza tu custodia compartida con <span class="gradient-word">claridad real</span></h1>
           <p class="hero-lead">
-            Semanas alternas, vacaciones, cambios y excepciones en un calendario visual que entiendes al momento. Sin hacer cuentas de cabeza, sin revisar mensajes antiguos y sin depender de un Excel para algo tan cotidiano.
+            Calendario visual, vacaciones, excepciones, convenio regulador con búsqueda rápida y etiquetas personalizables en una sola app. Todo pensado para consultar turnos, periodos especiales y acuerdos familiares sin hacer cuentas mentales.
           </p>
 
-          <div class="hero-actions">
-            <a class="store-btn" href="https://apps.apple.com/es/app/custodiapp/id6478144582" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-              <div class="text-col">
-                <span class="text-top">DISPONIBLE EN</span>
-                <span class="text-bottom">App Store</span>
-              </div>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener">
+              Descargar en Google Play
+          <div class="store-row" id="descargas-hero">
+            <a class="store-btn" href="https://apps.apple.com/es/app/custodiapp/id6478144582" target="_blank" rel="noopener noreferrer" aria-label="Descargar CustodiApp en App Store">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="store-text">
+                <span>DISPONIBLE EN</span>
+                <span>App Store</span>
+              </span>
             </a>
-            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
-              <div class="text-col">
-                <span class="text-top">DISPONIBLE EN</span>
-                <span class="text-bottom">Google Play</span>
-              </div>
+            <a class="btn btn-ghost" href="mailto:soporte@custodiapp.es">
+              Soporte
+
+            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar CustodiApp en Google Play">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="store-text">
+                <span>DISPONIBLE EN</span>
+                <span>Google Play</span>
+              </span>
             </a>
-          </div>
-          
-          <div class="highlight-menu">
-            <a href="#funciones" class="highlight-pill">⚙️ Funciones</a>
-            <a href="#opiniones" class="highlight-pill">⭐ Opiniones</a>
-            <a href="#guias" class="highlight-pill">📚 Guías</a>
           </div>
 
-          <div class="microproof">
-            <strong>Disponible en Apple y en Android.</strong> Pago único sin cuotas ni mensualidades.
+          <div class="fine">
+            Pago único. Sin cuotas mensuales. Datos guardados en tu móvil localmente.
+          <div class="hero-proof" aria-label="Ventajas principales">
+            <div class="proof-pill"><span></span>Convenio regulador consultable</div>
+            <div class="proof-pill"><span></span>Etiquetas Niñ@s o Papá/Mamá</div>
+            <div class="proof-pill"><span></span>Datos en tu dispositivo</div>
+            <div class="proof-pill"><span></span>Sin suscripciones</div>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Vista previa de la app">
-          <div class="hero-gallery">
-            <img src="screen-1.png" alt="Vista anual del calendario de custodia compartida" />
-            <img src="screen-2.png" alt="Pantalla de reglas de convenio y vacaciones" />
-            <img src="screen-3.png" alt="Pantalla de patrón de 14 días y ajustes" />
+        <aside class="side">
+          <h3>Lo que ganas hoy</h3>
+          <ul class="list">
+            <li><b>Calendario por colores</b> para ver “CON” y “SIN” de un vistazo.</li>
+            <li><b>Patrones automáticos</b> (semanas alternas, 2-2-3, días fijos…).</li>
+            <li><b>Convenio regulador</b>: Navidad, Semana Santa, Verano.</li>
+            <li><b>Excepciones y notas</b> para cambios puntuales.</li>
+            <li><b>Privacidad total</b>: sin cuentas, sin nube, sin anuncios.</li>
+        <div class="hero-visual" aria-label="Vista visual de CustodiApp">
+          <div class="orbit-card orbit-one">
+            Convenio a mano
+            <small>Búsqueda rápida por palabras</small>
+          </div>
+          <div class="orbit-card orbit-two">
+            Etiquetas flexibles
+            <small>Con Niñ@s o Con Papá/Mamá</small>
+          </div>
+
+          <div class="phone-shell">
+            <div class="phone">
+              <div class="notch"></div>
+              <div class="phone-header">
+                <div class="phone-brand">
+                  <div class="mini-logo"><img src="logo_transparente.png" alt="" /></div>
+                  <div>
+                    <div class="phone-title">CustodiApp <span style="opacity:.55;font-size:.72em">HIJ@S</span></div>
+                    <div class="phone-subtitle">Calendario de Custodia</div>
+                  </div>
+                </div>
+                <div class="phone-action">CONVENIO</div>
+              </div>
+              <div class="phone-tabs">
+                <div class="phone-tab active">CALENDARIO</div>
+                <div class="phone-tab">AÑO</div>
+                <div class="phone-tab">VACAC.</div>
+                <div class="phone-tab">EXCEP.</div>
+                <div class="phone-tab">⚙</div>
+              </div>
+              <div class="phone-body">
+                <div class="month-row">
+                  <span>‹</span>
+                  <span>ABRIL 2026</span>
+                  <span>›</span>
+                </div>
+                <div class="calendar-grid" aria-hidden="true">
+                  <div class="dow">L</div><div class="dow">M</div><div class="dow">X</div><div class="dow">J</div><div class="dow">V</div><div class="dow">S</div><div class="dow">D</div>
+                  <div class="day con soft">30</div><div class="day con soft">31</div><div class="day con">1</div><div class="day con">2</div><div class="day con">3</div><div class="day con">4</div><div class="day con">5</div>
+                  <div class="day con">6</div><div class="day con">7</div><div class="day con">8</div><div class="day con">9</div><div class="day con">10</div><div class="day con">11</div><div class="day con">12</div>
+                  <div class="day sin">13</div><div class="day sin">14</div><div class="day sin">15</div><div class="day sin">16</div><div class="day sin">17</div><div class="day sin">18</div><div class="day sin">19</div>
+                  <div class="day con">20</div><div class="day con">21</div><div class="day con">22</div><div class="day con">23</div><div class="day con">24</div><div class="day con">25</div><div class="day con">26</div>
+                </div>
+                <div class="label-row">
+                  <div class="label-card con">CON<br />PAPÁ</div>
+                  <div class="label-card sin">CON<br />MAMÁ</div>
+                </div>
+                <div class="search-card">
+                  <div class="search-title">CONVENIO REGULADOR</div>
+                  <div class="search-box">Buscar: vacaciones</div>
+                  <div class="result-row">
+                    <span class="result-chip">Navidad</span>
+                    <span class="result-chip">Semana Santa</span>
+                    <span class="result-chip">Verano</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -634,175 +1507,189 @@
 
     <section class="section" id="funciones">
       <div class="container">
-        <h2 class="section-title">Funciones clave</h2>
-        <p class="section-lead">
-          No es un calendario genérico. Está pensada específicamente para organizar custodias, vacaciones y excepciones sin perder el hilo ni tener que rehacerlo todo cada vez.
-        </p>
+        <div class="section-head">
+          <div class="section-kicker">Funciones clave</div>
+          <h2 class="section-title">La custodia compartida convertida en un calendario fácil de consultar</h2>
+          <p class="section-lead">
+            CustodiApp no es una agenda genérica. Está pensada para custodias reales: patrones, vacaciones, excepciones, convenio regulador y etiquetas claras para cada familia.
+          </p>
+        </div>
 
         <div class="feature-grid">
-          <a class="card" href="https://custodiapp.es/semanas-alternas-custodia.html">
-            <h3>Semanas alternas</h3>
-            <p>Consulta la base de tu calendario de forma visual y rápida, sin volver a pensar qué semana toca.</p>
-            <ul>
-              <li>Organización más clara</li>
-              <li>Menos errores por despiste</li>
-              <li>Consulta rápida del año</li>
-            </ul>
-          </a>
+          <div class="card">
+            <div class="icon-bubble"></div>
+            <h3>Calendario visual de custodia</h3>
+            <p>Consulta de un vistazo los días de custodia, periodos especiales y organización anual sin contar semanas una y otra vez.</p>
+          </div>
 
-          <a class="card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
-            <h3>Vacaciones y convenios</h3>
-            <p>Verano, Navidad, Semana Santa y reglas especiales integradas con más sentido y menos caos.</p>
-            <ul>
-              <li>Periodos especiales mejor ordenados</li>
-              <li>Menos cálculo mental</li>
-              <li>Más claridad en fechas clave</li>
-            </ul>
-          </a>
+          <div class="card">
+            <div class="icon-bubble"></div>
+            <h3>Vacaciones y periodos especiales</h3>
+            <p>Organiza verano, Navidad, Semana Santa y cambios puntuales con una vista clara y fácil de revisar.</p>
+          </div>
 
-          <a class="card" href="https://custodiapp.es/calendario-custodia-compartida.html">
-            <h3>Cambios y excepciones</h3>
-            <p>La vida real no siempre sigue el patrón perfecto. La app te ayuda a no perder el hilo cuando hay ajustes.</p>
-            <ul>
-              <li>Cambios puntuales</li>
-              <li>Más control visual</li>
-              <li>Calendario siempre entendible</li>
-            </ul>
-          </a>
+          <div class="card">
+            <div class="icon-bubble"></div>
+            <h3>Convenio regulador dentro de la app</h3>
+            <p>Guarda tu convenio y busca rápidamente palabras como vacaciones, entregas, recogidas, Navidad o cumpleaños.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon-bubble"></div>
+            <h3>Etiquetas personalizables</h3>
+            <p>Elige cómo quieres ver el calendario: Con Niñ@s / Sin Niñ@s o Con Papá / Con Mamá.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="convenio">
+      <div class="container split">
+        <div class="panel">
+          <div class="section-kicker">Convenio regulador</div>
+          <h2 class="section-title">Tu calendario y tu convenio, juntos</h2>
+          <p class="section-lead">
+            Cuando aparece una duda, no tienes que buscar el PDF en correos, carpetas o conversaciones antiguas. Puedes consultar el convenio desde la app y localizar términos importantes en segundos.
+          </p>
+          <ul class="check-list">
+            <li>Busca palabras clave como vacaciones, Navidad, Semana Santa, recogida o entrega.</li>
+            <li>Revisa el texto del convenio junto al calendario que usas cada día.</li>
+            <li>Mantén tus datos y tus documentos bajo tu control, sin cuentas ni sincronizaciones innecesarias.</li>
+          </ul>
+        </aside>
+        </div>
+
+        <div class="search-demo" aria-label="Ejemplo de búsqueda en convenio">
+          <div class="pdf-bar">
+            <div class="pdf-title">Convenio regulador</div>
+            <div class="pdf-pill">PDF consultable</div>
+          </div>
+          <div class="pdf-search">Buscar dentro del convenio: vacaciones</div>
+          <div class="pdf-result">
+            <strong>Resultado encontrado</strong><br />
+            “Durante los periodos de vacaciones escolares, las estancias se distribuirán conforme a los bloques establecidos para verano, Navidad y Semana Santa...”
+          </div>
+          <div class="pdf-result" style="margin-top:10px">
+            <strong>También relacionado</strong><br />
+            Entregas, recogidas, horarios, festivos, cumpleaños y periodos no lectivos.
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="ahorro">
       <div class="container">
-        <h2 class="section-title">Qué te ahorra en el día a día</h2>
-        <p class="section-lead">
-          CustodiApp está pensada para hacer más fácil algo que muchas veces termina siendo confuso: fechas, cambios, vacaciones y decisiones que no deberían depender de cálculos mentales o mensajes desperdigados.
-        </p>
+        <div class="section-head">
+          <div class="section-kicker">Claridad diaria</div>
+          <h2 class="section-title">Menos dudas, menos cálculo mental, más calma</h2>
+          <p class="section-lead">
+            La app está diseñada para reducir los pequeños roces de cada semana: qué día toca, cómo cae un periodo especial o dónde decía exactamente el convenio algo importante.
+          </p>
+        </div>
 
-        <div class="pain-grid">
-          <div class="card">
-            <h3>Menos errores</h3>
-            <p>Evita confundirte con semanas alternas, vacaciones, puentes y cambios puntuales.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Configura tu patrón</h3>
+            <p>Define el ciclo de custodia y el calendario se proyecta visualmente para el año completo.</p>
           </div>
-          <div class="card">
-            <h3>Menos cálculo mental</h3>
-            <p>Dejas de contar días, fines de semana y rotaciones una y otra vez.</p>
+
+          <div class="step">
+            <h3>Añade excepciones</h3>
+            <p>Vacaciones, cambios puntuales y periodos especiales quedan reflejados sin romper la vista general.</p>
           </div>
-          <div class="card">
-            <h3>Más claridad</h3>
-            <p>Todo queda más visual, más ordenado y más fácil de consultar en segundos.</p>
+
+          <div class="step">
+            <h3>Consulta sin discutir con las fechas</h3>
+            <p>Calendario y convenio quedan en el mismo lugar para resolver dudas con más rapidez.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="grid">
+      <div class="card">
+        <b>Herramienta personal</b>
+        <p>Tú la usas, tú te organizas. Sin agendas relacionadas.</p>
     <section class="section" id="opiniones">
       <div class="container">
-        <h2 class="section-title">Lo que ya dicen quienes la usan</h2>
-        <p class="section-lead">
-          Opiniones reales publicadas en Google Play.
-        </p>
+        <div class="section-head">
+          <div class="section-kicker">Opiniones</div>
+          <h2 class="section-title">Una app pensada para usarse de verdad</h2>
+          <p class="section-lead">Valoraciones de personas que buscaban precisamente eso: una forma clara y práctica de organizar la custodia.</p>
+        </div>
 
-        <div class="reviews-grid">
+        <div class="review-grid">
           <div class="card">
-            <div class="review-quote">“Ideal. Me encanta. 100% recomendable.”</div>
-            <div class="review-source">— Cristina · reseña en Google Play</div>
+            <div class="quote">“Ideal. Me encanta. 100% recomendable.”</div>
+            <div class="source">Cristina · reseña en Google Play</div>
           </div>
 
           <div class="card">
-            <div class="review-quote">“Muy práctica y fácil de usar. Recomendable y muy útil para gestionar calendario de custodia y necesidades similares.”</div>
-            <div class="review-source">— Reseña de usuario</div>
+            <div class="quote">“Muy práctica y fácil de usar. Recomendable y muy útil para gestionar calendario de custodia.”</div>
+            <div class="source">Reseña de usuario</div>
           </div>
 
           <div class="card">
-            <div class="review-quote">“Herramienta muy práctica para gestionar custodias, vacaciones y organización con los niños. Muy recomendable y evita malentendidos.”</div>
-            <div class="review-source">— Reseña de usuario</div>
+            <div class="quote">“Herramienta muy práctica para gestionar custodias, vacaciones y organización con los niños.”</div>
+            <div class="source">Reseña de usuario</div>
           </div>
         </div>
       </div>
+      <div class="card">
+        <b>Sin menús infinitos</b>
+        <p>Configuras tu patrón una vez y tienes cualquier año completo a la vista.</p>
     </section>
 
     <section class="section" id="guias">
       <div class="container">
-        <h2 class="section-title">Guías y situaciones habituales</h2>
-        <p class="section-lead">
-          Si quieres resolver un caso concreto o entender mejor cómo encaja la app en tu situación, aquí tienes acceso rápido a las páginas más útiles.
-        </p>
+        <div class="section-head">
+          <div class="section-kicker">Guías útiles</div>
+          <h2 class="section-title">Situaciones habituales de custodia compartida</h2>
+          <p class="section-lead">Acceso rápido a explicaciones sobre calendario, semanas alternas, vacaciones, Navidad, verano, Semana Santa y convenio regulador.</p>
+        </div>
 
         <div class="guides-grid">
-          <a class="guide-card" href="https://custodiapp.es/custodia-compartida.html">
-            <strong>Custodia compartida</strong>
-            <span>Visión general y acceso a todas las guías y recursos principales.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/calendario-custodia-compartida.html">
-            <strong>Calendario de custodia compartida</strong>
-            <span>Explicación clara, capturas y acceso directo a la app.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/semanas-alternas-custodia.html">
-            <strong>Semanas alternas</strong>
-            <span>Cómo organizar y entender el patrón anual con claridad.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/vacaciones-custodia-compartida.html">
-            <strong>Vacaciones en custodia compartida</strong>
-            <span>Verano, Navidad, Semana Santa y excepciones explicadas de forma visual.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-navidad.html">
-            <strong>Custodia compartida en Navidad</strong>
-            <span>Bloques navideños, cambios y periodos especiales sin liarte con las fechas.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-verano.html">
-            <strong>Custodia compartida en verano</strong>
-            <span>Quincenas, bloques y vacaciones escolares organizados con claridad.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/custodia-compartida-semana-santa.html">
-            <strong>Custodia compartida en Semana Santa</strong>
-            <span>Periodos cortos y excepciones resueltos de forma simple.</span>
-          </a>
-
-          <a class="guide-card" href="https://custodiapp.es/convenio-regulador-custodia-compartida.html">
-            <strong>Convenio regulador</strong>
-            <span>Cómo aterrizar el convenio en un calendario real con vacaciones y bloques.</span>
-          </a>
+          <a class="guide" href="https://custodiapp.es/custodia-compartida.html"><strong>Custodia compartida</strong>Visión general y recursos principales.</a>
+          <a class="guide" href="https://custodiapp.es/calendario-custodia-compartida.html"><strong>Calendario de custodia</strong>Cómo organizar el año visualmente.</a>
+          <a class="guide" href="https://custodiapp.es/semanas-alternas-custodia.html"><strong>Semanas alternas</strong>Patrones y rotaciones claras.</a>
+          <a class="guide" href="https://custodiapp.es/vacaciones-custodia-compartida.html"><strong>Vacaciones</strong>Verano, Navidad y Semana Santa.</a>
+          <a class="guide" href="https://custodiapp.es/custodia-compartida-navidad.html"><strong>Navidad</strong>Bloques navideños sin perder fechas.</a>
+          <a class="guide" href="https://custodiapp.es/custodia-compartida-verano.html"><strong>Verano</strong>Quincenas, bloques y vacaciones.</a>
+          <a class="guide" href="https://custodiapp.es/custodia-compartida-semana-santa.html"><strong>Semana Santa</strong>Periodos cortos y excepciones.</a>
+          <a class="guide" href="https://custodiapp.es/convenio-regulador-custodia-compartida.html"><strong>Convenio regulador</strong>Cómo tenerlo a mano junto al calendario.</a>
         </div>
       </div>
+      <div class="card">
+        <b>Backup sencillo</b>
+        <p>Exporta e importa tu base de datos para no perder nada al cambiar de dispositivo.</p>
     </section>
 
     <section class="final-cta" id="descargar">
       <div class="container">
         <div class="cta-panel">
-          <h2>Claridad para tu custodia compartida</h2>
+          <h2>Toda tu custodia compartida, en una sola app</h2>
           <p>
-            CustodiApp ya está disponible para Apple y Android. <strong>Pago único, sin cuotas ni mensualidades</strong>. Una forma visual y sencilla de organizar semanas alternas, vacaciones y cambios sin complicarte más de la cuenta.
+            CustodiApp reúne calendario, vacaciones, excepciones, etiquetas personalizables y convenio regulador consultable. Pago único, sin cuotas ni mensualidades.
           </p>
-          <div class="cta-row">
-            <a class="store-btn" href="https://apps.apple.com/es/app/custodiapp/id6478144582" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-              <div class="text-col">
-                <span class="text-top">DISPONIBLE EN</span>
-                <span class="text-bottom">App Store</span>
-              </div>
+          <div class="store-row">
+            <a class="store-btn" href="https://apps.apple.com/es/app/custodiapp/id6478144582" target="_blank" rel="noopener noreferrer" aria-label="Descargar CustodiApp en App Store">
+              <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="store-text"><span>DISPONIBLE EN</span><span>App Store</span></span>
             </a>
-            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
-              <div class="text-col">
-                <span class="text-top">DISPONIBLE EN</span>
-                <span class="text-bottom">Google Play</span>
-              </div>
+            <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.custodiapp.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar CustodiApp en Google Play">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+              <span class="store-text"><span>DISPONIBLE EN</span><span>Google Play</span></span>
             </a>
           </div>
-          <div class="microproof">Pago único · Sin mensualidades · Disponible en Apple y Android</div>
         </div>
       </div>
     </section>
   </main>
 
+    <div class="footer">
+      <div>© <span id="y"></span> CustodiApp · Las Palmas de Gran Canaria</div>
+      <div>
+        <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a> ·
   <footer class="footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> CustodiApp · Las Palmas de Gran Canaria</div>
@@ -812,9 +1699,11 @@
         <a href="mailto:soporte@custodiapp.es">soporte@custodiapp.es</a>
       </div>
     </div>
+  </div>
   </footer>
 
   <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
